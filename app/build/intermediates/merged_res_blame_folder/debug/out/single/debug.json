@@ -8,12 +8,12 @@
         "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\fragment_views_api.xml"
     },
     {
-        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\mipmap-hdpi\\ic_launcher.webp"
-    },
-    {
         "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\mipmap-mdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\mipmap-hdpi\\ic_launcher.webp"
     },
     {
         "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\drawable_baseline_system_update_alt_24.xml.flat",
@@ -40,12 +40,12 @@
         "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\drawable\\baseline_grid_view_24.xml"
     },
     {
-        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\layout_fragment_add.xml.flat",
-        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\fragment_add.xml"
+        "merged": "com.newzarc.newzarc.app-merged_res-50:/layout_activity_detailed.xml.flat",
+        "source": "com.newzarc.newzarc.app-main-52:/layout/activity_detailed.xml"
     },
     {
-        "merged": "com.newzarc.newzarc.app-merged_res-50:/menu_admin_nav.xml.flat",
-        "source": "com.newzarc.newzarc.app-main-52:/menu/admin_nav.xml"
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\layout_fragment_add.xml.flat",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\fragment_add.xml"
     },
     {
         "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
@@ -60,12 +60,12 @@
         "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.newzarc.newzarc.app-merged_res-50:/navigation_admin_navigation.xml.flat",
-        "source": "com.newzarc.newzarc.app-main-52:/navigation/admin_navigation.xml"
-    },
-    {
         "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\drawable-v24_ic_launcher_foreground.xml.flat",
         "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\layout_activity_update.xml.flat",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\activity_update.xml"
     },
     {
         "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
@@ -78,6 +78,10 @@
     {
         "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\drawable_ic_launcher_background.xml.flat",
         "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\layout_fragment_dashboard.xml.flat",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\fragment_dashboard.xml"
     },
     {
         "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\layout_fragment_views.xml.flat",
@@ -156,6 +160,10 @@
         "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\navigation\\nav_graph.xml"
     },
     {
+        "merged": "com.newzarc.newzarc.app-merged_res-50:/layout_activity_update.xml.flat",
+        "source": "com.newzarc.newzarc.app-main-52:/layout/activity_update.xml"
+    },
+    {
         "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\drawable_baseline_account_circle_24.xml.flat",
         "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\drawable\\baseline_account_circle_24.xml"
     },
@@ -172,7 +180,7 @@
         "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "com.newzarc.newzarc.app-merged_res-50:/layout_fragment_dashboard.xml.flat",
-        "source": "com.newzarc.newzarc.app-main-52:/layout/fragment_dashboard.xml"
+        "merged": "com.newzarc.newzarc.app-merged_res-50:/layout_activity_detailed_api.xml.flat",
+        "source": "com.newzarc.newzarc.app-main-52:/layout/activity_detailed_api.xml"
     }
 ]

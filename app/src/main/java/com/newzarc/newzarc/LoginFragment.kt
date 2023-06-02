@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.newzarc.newzarc.databinding.FragmentLoginBinding
-import com.newzarc.newzarc.ui.AdminActivity
+import com.newzarc.newzarc.ui.admin.AdminActivity
 
 
 class LoginFragment : Fragment() {

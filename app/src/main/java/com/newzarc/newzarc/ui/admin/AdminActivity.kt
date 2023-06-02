@@ -1,4 +1,4 @@
-package com.newzarc.newzarc.ui
+package com.newzarc.newzarc.ui.admin
 
 import android.annotation.SuppressLint
 import android.app.Activity
@@ -12,8 +12,10 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import com.google.android.material.navigation.NavigationView
 import com.newzarc.newzarc.AddFragment
+import com.newzarc.newzarc.DashboardFragment
 import com.newzarc.newzarc.R
-import com.newzarc.newzarc.UpdateFragment
+import com.newzarc.newzarc.ui.ViewsActivity
+import com.newzarc.newzarc.ui.ViewsApiActivity
 
 class AdminActivity : AppCompatActivity() {
     private lateinit var toggle : ActionBarDrawerToggle
@@ -27,7 +29,7 @@ class AdminActivity : AppCompatActivity() {
         drawerLayout = findViewById(R.id.drawerLayout)
         val navigationView : NavigationView = findViewById(R.id.navigationView)
 
-//        replaceFragment(ViewsFragment(), "News")
+        replaceFragment(DashboardFragment(), "Dashboard")
 
         toggle = ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close)
         drawerLayout.addDrawerListener(toggle)
@@ -46,7 +48,7 @@ class AdminActivity : AppCompatActivity() {
 //                R.id.viewsActivity -> replaceFragment(ViewsFragment(), it.title.toString())
                 R.id.viewsActivity -> clickMe(ViewsActivity(), "View News")
                 R.id.viewsApiActivity -> clickMe(ViewsApiActivity(), "View News")
-                R.id.updateFragment -> replaceFragment(UpdateFragment(), it.title.toString())
+                R.id.updateFragment -> clickMe(UpdateActivity(), "Update News")
             }
             true
         }

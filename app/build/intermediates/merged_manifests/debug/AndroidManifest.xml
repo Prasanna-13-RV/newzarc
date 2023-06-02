@@ -32,19 +32,22 @@
         android:theme="@style/Theme.Newzarc"
         android:usesCleartextTraffic="true" >
         <activity
-            android:name="com.newzarc.newzarc.ui.DetailedApiActivity"
+            android:name="com.newzarc.newzarc.ui.admin.UpdateActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.newzarc.newzarc.ui.admin.DetailedApiActivity"
             android:exported="false" />
         <activity
             android:name="com.newzarc.newzarc.ui.ViewsApiActivity"
             android:exported="false" />
         <activity
-            android:name="com.newzarc.newzarc.ui.DetailedActivity"
+            android:name="com.newzarc.newzarc.ui.admin.DetailedActivity"
             android:exported="false" />
         <activity
             android:name="com.newzarc.newzarc.ui.ViewsActivity"
             android:exported="false" />
         <activity
-            android:name="com.newzarc.newzarc.ui.AdminActivity"
+            android:name="com.newzarc.newzarc.ui.admin.AdminActivity"
             android:exported="false" />
         <activity
             android:name="com.newzarc.newzarc.MainActivity"

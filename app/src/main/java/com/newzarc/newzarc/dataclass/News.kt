@@ -4,6 +4,7 @@ import android.os.Parcel
 import android.os.Parcelable
 
 data class News(
+    val id : Int,
     val title: String,
     val description: String,
     val content: String,
@@ -11,6 +12,7 @@ data class News(
     val image_url: String
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
+        parcel.readInt(),
         parcel.readString()!!,
         parcel.readString()!!,
         parcel.readString()!!,
@@ -20,6 +22,7 @@ data class News(
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
+        parcel.writeInt(id)
         parcel.writeString(title)
         parcel.writeString(description)
         parcel.writeString(content)

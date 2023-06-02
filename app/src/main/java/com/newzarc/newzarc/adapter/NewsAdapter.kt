@@ -16,6 +16,8 @@ class NewsAdapter(private val newsList: ArrayList<News>) :
 
     private lateinit var context : Context
     var onItemClick : ((News) -> Unit)? = null
+    var onItemEdit : ((News) -> Unit)? = null
+    var onItemDelete : ((News) -> Unit)? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         context = parent.context
@@ -40,9 +42,20 @@ class NewsAdapter(private val newsList: ArrayList<News>) :
         holder.itemTitle.text = currentItem.title
         holder.itemDescription.text = currentItem.content
 
-        holder.viewButton.setOnClickListener {
+        holder.itemTitle.setOnClickListener {
             onItemClick?.invoke(currentItem)
         }
+
+        holder.editButton.setOnClickListener {
+            onItemEdit?.invoke(currentItem)
+        }
+
+
+        holder.deleteButton.setOnClickListener {
+            onItemDelete?.invoke(currentItem)
+        }
+
+
     }
 
     class MyViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
@@ -50,6 +63,7 @@ class NewsAdapter(private val newsList: ArrayList<News>) :
         val itemImage : ImageView = itemView.findViewById(R.id.newsImage)
         val itemTitle : TextView = itemView.findViewById(R.id.newsTitle)
         val itemDescription : TextView = itemView.findViewById(R.id.subtitle)
-        val viewButton : TextView = itemView.findViewById(R.id.viewButton)
+        val deleteButton : TextView = itemView.findViewById(R.id.viewButton)
+        val editButton : TextView = itemView.findViewById(R.id.updateButton)
     }
 }

@@ -5,17 +5,21 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.app.NavUtils
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.JsonArrayRequest
+import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.newzarc.newzarc.R
 import com.newzarc.newzarc.adapter.NewsAdapter
 import com.newzarc.newzarc.dataclass.News
+import com.newzarc.newzarc.ui.admin.AdminActivity
+import com.newzarc.newzarc.ui.admin.DetailedActivity
+import com.newzarc.newzarc.ui.admin.UpdateActivity
 
 
 class ViewsActivity : AppCompatActivity() {
@@ -43,6 +47,7 @@ class ViewsActivity : AppCompatActivity() {
                 val jsonObj = jsonArray.getJSONObject(i)
 
                 val news = News(
+                    jsonObj.getInt("id"),
                     jsonObj.getString("title"),
                     jsonObj.getString("description"),
                     jsonObj.getString("content"),
@@ -65,10 +70,39 @@ class ViewsActivity : AppCompatActivity() {
                 intent.putExtra("news", it)
                 startActivity(intent)
             }
+
+            newsAdapter.onItemEdit = {
+                val intent = Intent(this, UpdateActivity::class.java)
+                intent.putExtra("news", it)
+                startActivity(intent)
+            }
+
+            newsAdapter.onItemDelete = {
+                val news = it
+                val newsId = news.id
+
+                Log.d("myexample", news.id.toString())
+                deleteNews(newsId)
+            }
+
+
         }, {err ->
             Log.d("Volley Example error", err.toString())
         })
         reqQueue.add(request)
+    }
+
+    private fun deleteNews(newsId: Int) {
+        val requestQueue = Volley.newRequestQueue(this)
+        val url = "http://192.168.1.4:8080/news/delete/$newsId"
+        val jsonObjectRequest = StringRequest(Request.Method.DELETE, url, { response ->
+            Log.d("pbjectresponse", response.toString())
+            Toast.makeText(this, response.toString(), Toast.LENGTH_LONG).show()
+        }) {error ->
+            Log.d("pbjecterror", error.toString())
+            Toast.makeText(this, error.message, Toast.LENGTH_LONG).show()
+        }
+        requestQueue.add(jsonObjectRequest)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

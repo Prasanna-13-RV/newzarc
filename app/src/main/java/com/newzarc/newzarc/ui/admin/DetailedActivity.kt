@@ -1,4 +1,4 @@
-package com.newzarc.newzarc.ui
+package com.newzarc.newzarc.ui.admin
 
 import android.app.Activity
 import android.content.Intent
@@ -11,29 +11,28 @@ import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.newzarc.newzarc.R
 import com.newzarc.newzarc.dataclass.News
-import com.newzarc.newzarc.dataclass.NewsApi
+import com.newzarc.newzarc.ui.ViewsActivity
 
-class DetailedApiActivity : AppCompatActivity() {
+class DetailedActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_detailed_api)
+        setContentView(R.layout.activity_detailed)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true);
 
-        var news = intent.getParcelableExtra<NewsApi>("news")
+
+        var news = intent.getParcelableExtra<News>("news")
         if (news != null) {
             val title : TextView = findViewById(R.id.newsTitle)
             val content : TextView = findViewById(R.id.newsContent)
             val description : TextView = findViewById(R.id.newsDescription)
             val pubDate : TextView = findViewById(R.id.newsDate)
-            val link : TextView = findViewById(R.id.newsLink)
             val image_url : ImageView = findViewById(R.id.newsImage)
 
             title.text = news.title
             content.text = news.content
             description.text = news.description
             pubDate.text = news.pubDate
-            link.text = news.link
             Glide.with(applicationContext)
                 .load(news.image_url)
                 .into(image_url)
@@ -45,7 +44,7 @@ class DetailedApiActivity : AppCompatActivity() {
         return when (item.itemId) {
             android.R.id.home -> {
 //                NavUtils.navigateUpFromSameTask(this)
-                clickMe(AdminActivity())
+                clickMe(ViewsActivity())
                 true
             }
             else -> super.onOptionsItemSelected(item)

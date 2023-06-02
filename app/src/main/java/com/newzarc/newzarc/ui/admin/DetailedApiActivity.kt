@@ -1,4 +1,4 @@
-package com.newzarc.newzarc.ui
+package com.newzarc.newzarc.ui.admin
 
 import android.app.Activity
 import android.content.Intent
@@ -10,28 +10,30 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.newzarc.newzarc.R
-import com.newzarc.newzarc.dataclass.News
+import com.newzarc.newzarc.dataclass.NewsApi
+import com.newzarc.newzarc.ui.ViewsApiActivity
 
-class DetailedActivity : AppCompatActivity() {
+class DetailedApiActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_detailed)
+        setContentView(R.layout.activity_detailed_api)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true);
 
-
-        var news = intent.getParcelableExtra<News>("news")
+        var news = intent.getParcelableExtra<NewsApi>("news")
         if (news != null) {
             val title : TextView = findViewById(R.id.newsTitle)
             val content : TextView = findViewById(R.id.newsContent)
             val description : TextView = findViewById(R.id.newsDescription)
             val pubDate : TextView = findViewById(R.id.newsDate)
+            val link : TextView = findViewById(R.id.newsLink)
             val image_url : ImageView = findViewById(R.id.newsImage)
 
             title.text = news.title
             content.text = news.content
             description.text = news.description
             pubDate.text = news.pubDate
+            link.text = news.link
             Glide.with(applicationContext)
                 .load(news.image_url)
                 .into(image_url)
@@ -43,7 +45,7 @@ class DetailedActivity : AppCompatActivity() {
         return when (item.itemId) {
             android.R.id.home -> {
 //                NavUtils.navigateUpFromSameTask(this)
-                clickMe(AdminActivity())
+                clickMe(ViewsApiActivity())
                 true
             }
             else -> super.onOptionsItemSelected(item)

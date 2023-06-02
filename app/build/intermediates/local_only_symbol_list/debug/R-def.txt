@@ -23,7 +23,6 @@ id admin_navigation
 id cardView
 id conPasswordInput
 id conPasswordLabel
-id containedButton
 id contentsCard
 id create_sub_title
 id dashboardFragment
@@ -36,6 +35,7 @@ id emailLabel
 id emailLoginLabel
 id fragmentContainerView
 id frameLayout
+id frameLayout2
 id loginButton
 id loginFragment
 id loginGoogleButton
@@ -72,8 +72,10 @@ id signupGoogle
 id signupbutton
 id subLoginIn
 id subtitle
+id textView2
 id updateButton
 id updateFragment
+id updateNews
 id userName
 id viewButton
 id viewsActivity
@@ -82,6 +84,7 @@ layout activity_admin
 layout activity_detailed
 layout activity_detailed_api
 layout activity_main
+layout activity_update
 layout activity_views
 layout activity_views_api
 layout fragment_add

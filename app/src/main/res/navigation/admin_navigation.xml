@@ -20,4 +20,5 @@
         android:name="com.newzarc.newzarc.DashboardFragment"
         android:label="fragment_dashboard"
         tools:layout="@layout/fragment_dashboard" />
+
 </navigation>

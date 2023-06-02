@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -26,40 +27,63 @@ public final class FragmentUpdateBinding implements ViewBinding {
   public final ConstraintLayout addContainer;
 
   @NonNull
-  public final Button containedButton;
-
-  @NonNull
   public final NestedScrollView nestedScrollView;
 
   @NonNull
   public final TextInputLayout newsContent;
 
   @NonNull
+  public final EditText newsContentInput;
+
+  @NonNull
   public final TextInputLayout newsDate;
+
+  @NonNull
+  public final EditText newsDateInput;
 
   @NonNull
   public final TextInputLayout newsDescription;
 
   @NonNull
+  public final EditText newsDescriptionInput;
+
+  @NonNull
   public final TextInputLayout newsImageUrl;
+
+  @NonNull
+  public final EditText newsImageUrlInput;
 
   @NonNull
   public final TextInputLayout newsTitle;
 
+  @NonNull
+  public final EditText newsTitleInput;
+
+  @NonNull
+  public final Button updateNews;
+
   private FragmentUpdateBinding(@NonNull FrameLayout rootView,
-      @NonNull ConstraintLayout addContainer, @NonNull Button containedButton,
-      @NonNull NestedScrollView nestedScrollView, @NonNull TextInputLayout newsContent,
-      @NonNull TextInputLayout newsDate, @NonNull TextInputLayout newsDescription,
-      @NonNull TextInputLayout newsImageUrl, @NonNull TextInputLayout newsTitle) {
+      @NonNull ConstraintLayout addContainer, @NonNull NestedScrollView nestedScrollView,
+      @NonNull TextInputLayout newsContent, @NonNull EditText newsContentInput,
+      @NonNull TextInputLayout newsDate, @NonNull EditText newsDateInput,
+      @NonNull TextInputLayout newsDescription, @NonNull EditText newsDescriptionInput,
+      @NonNull TextInputLayout newsImageUrl, @NonNull EditText newsImageUrlInput,
+      @NonNull TextInputLayout newsTitle, @NonNull EditText newsTitleInput,
+      @NonNull Button updateNews) {
     this.rootView = rootView;
     this.addContainer = addContainer;
-    this.containedButton = containedButton;
     this.nestedScrollView = nestedScrollView;
     this.newsContent = newsContent;
+    this.newsContentInput = newsContentInput;
     this.newsDate = newsDate;
+    this.newsDateInput = newsDateInput;
     this.newsDescription = newsDescription;
+    this.newsDescriptionInput = newsDescriptionInput;
     this.newsImageUrl = newsImageUrl;
+    this.newsImageUrlInput = newsImageUrlInput;
     this.newsTitle = newsTitle;
+    this.newsTitleInput = newsTitleInput;
+    this.updateNews = updateNews;
   }
 
   @Override
@@ -95,12 +119,6 @@ public final class FragmentUpdateBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.containedButton;
-      Button containedButton = ViewBindings.findChildViewById(rootView, id);
-      if (containedButton == null) {
-        break missingId;
-      }
-
       id = R.id.nestedScrollView;
       NestedScrollView nestedScrollView = ViewBindings.findChildViewById(rootView, id);
       if (nestedScrollView == null) {
@@ -113,9 +131,21 @@ public final class FragmentUpdateBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.newsContentInput;
+      EditText newsContentInput = ViewBindings.findChildViewById(rootView, id);
+      if (newsContentInput == null) {
+        break missingId;
+      }
+
       id = R.id.newsDate;
       TextInputLayout newsDate = ViewBindings.findChildViewById(rootView, id);
       if (newsDate == null) {
+        break missingId;
+      }
+
+      id = R.id.newsDateInput;
+      EditText newsDateInput = ViewBindings.findChildViewById(rootView, id);
+      if (newsDateInput == null) {
         break missingId;
       }
 
@@ -125,9 +155,21 @@ public final class FragmentUpdateBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.newsDescriptionInput;
+      EditText newsDescriptionInput = ViewBindings.findChildViewById(rootView, id);
+      if (newsDescriptionInput == null) {
+        break missingId;
+      }
+
       id = R.id.newsImageUrl;
       TextInputLayout newsImageUrl = ViewBindings.findChildViewById(rootView, id);
       if (newsImageUrl == null) {
+        break missingId;
+      }
+
+      id = R.id.newsImageUrlInput;
+      EditText newsImageUrlInput = ViewBindings.findChildViewById(rootView, id);
+      if (newsImageUrlInput == null) {
         break missingId;
       }
 
@@ -137,8 +179,22 @@ public final class FragmentUpdateBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentUpdateBinding((FrameLayout) rootView, addContainer, containedButton,
-          nestedScrollView, newsContent, newsDate, newsDescription, newsImageUrl, newsTitle);
+      id = R.id.newsTitleInput;
+      EditText newsTitleInput = ViewBindings.findChildViewById(rootView, id);
+      if (newsTitleInput == null) {
+        break missingId;
+      }
+
+      id = R.id.updateNews;
+      Button updateNews = ViewBindings.findChildViewById(rootView, id);
+      if (updateNews == null) {
+        break missingId;
+      }
+
+      return new FragmentUpdateBinding((FrameLayout) rootView, addContainer, nestedScrollView,
+          newsContent, newsContentInput, newsDate, newsDateInput, newsDescription,
+          newsDescriptionInput, newsImageUrl, newsImageUrlInput, newsTitle, newsTitleInput,
+          updateNews);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

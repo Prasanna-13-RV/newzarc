@@ -2698,7 +2698,6 @@ id conPasswordInput
 id conPasswordLabel
 id confirm_button
 id constraint
-id containedButton
 id container
 id content
 id contentPanel
@@ -2776,6 +2775,7 @@ id forever
 id fragmentContainerView
 id fragment_container_view_tag
 id frameLayout
+id frameLayout2
 id frost
 id ghost_view
 id ghost_view_holder
@@ -3053,6 +3053,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView2
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3084,6 +3085,7 @@ id unlabeled
 id up
 id updateButton
 id updateFragment
+id updateNews
 id useLogo
 id userName
 id vertical_only
@@ -3197,6 +3199,7 @@ layout activity_admin
 layout activity_detailed
 layout activity_detailed_api
 layout activity_main
+layout activity_update
 layout activity_views
 layout activity_views_api
 layout custom_dialog

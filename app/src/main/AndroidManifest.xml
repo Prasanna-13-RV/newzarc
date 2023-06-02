@@ -17,19 +17,22 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".ui.DetailedApiActivity"
+            android:name=".ui.admin.UpdateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.admin.DetailedApiActivity"
             android:exported="false" />
         <activity
             android:name=".ui.ViewsApiActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.DetailedActivity"
+            android:name=".ui.admin.DetailedActivity"
             android:exported="false" />
         <activity
             android:name=".ui.ViewsActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.AdminActivity"
+            android:name=".ui.admin.AdminActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
