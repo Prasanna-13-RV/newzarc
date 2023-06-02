@@ -1,0 +1,70 @@
+[
+    {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-mergeDebugResources-49:\\layout\\fragment_views.xml",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\fragment_views.xml"
+    },
+    {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-mergeDebugResources-49:\\layout\\fragment_add.xml",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\fragment_add.xml"
+    },
+    {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-mergeDebugResources-49:\\layout\\fragment_login.xml",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\fragment_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-mergeDebugResources-49:\\layout\\activity_admin.xml",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\activity_admin.xml"
+    },
+    {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-mergeDebugResources-49:\\layout\\fragment_views_api.xml",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\fragment_views_api.xml"
+    },
+    {
+        "merged": "com.newzarc.newzarc.app-mergeDebugResources-49:/layout/fragment_dashboard.xml",
+        "source": "com.newzarc.newzarc.app-main-52:/layout/fragment_dashboard.xml"
+    },
+    {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-mergeDebugResources-49:\\layout\\fragment_register.xml",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\fragment_register.xml"
+    },
+    {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-mergeDebugResources-49:\\layout\\news_card.xml",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\news_card.xml"
+    },
+    {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-mergeDebugResources-49:\\layout\\activity_views_api.xml",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\activity_views_api.xml"
+    },
+    {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-mergeDebugResources-49:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-mergeDebugResources-49:\\layout\\fragment_update.xml",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\fragment_update.xml"
+    },
+    {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-mergeDebugResources-49:\\layout\\fragment_detailed.xml",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\fragment_detailed.xml"
+    },
+    {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-mergeDebugResources-49:\\layout\\activity_detailed.xml",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\activity_detailed.xml"
+    },
+    {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-mergeDebugResources-49:\\layout\\activity_views.xml",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\activity_views.xml"
+    },
+    {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-mergeDebugResources-49:\\layout\\nav_header.xml",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\nav_header.xml"
+    },
+    {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-mergeDebugResources-49:\\layout\\activity_detailed_api.xml",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\activity_detailed_api.xml"
+    },
+    {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-mergeDebugResources-49:\\layout\\content_admin.xml",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\content_admin.xml"
+    }
+]

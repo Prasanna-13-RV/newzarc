@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    >
+
+<!--    <item-->
+<!--        android:id="@+id/home"-->
+<!--        android:title="Home"-->
+<!--        android:icon="@drawable/baseline_account_circle_24"-->
+<!--        />-->
+
+    <item
+        android:id="@+id/dashboardFragment"
+        android:title="Dashboard"
+        android:icon="@drawable/baseline_account_circle_24"
+        />
+
+    <item
+        android:id="@+id/viewsActivity"
+        android:title="View News"
+        android:icon="@drawable/baseline_grid_view_24"
+        />
+
+    <item
+        android:id="@+id/viewsApiActivity"
+        android:title="View Api News"
+        android:icon="@drawable/baseline_grid_view_24"
+        />
+
+    <item
+        android:id="@+id/addFragment"
+        android:icon="@drawable/baseline_add_24"
+        android:title="Add News"
+        />
+
+    <item
+        android:id="@+id/updateFragment"
+        android:icon="@drawable/baseline_add_24"
+        android:title="Update News"
+        />
+
+
+
+</menu>
