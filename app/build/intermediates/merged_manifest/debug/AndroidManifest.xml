@@ -38,19 +38,19 @@
             android:name="com.newzarc.newzarc.ui.admin.DetailedApiActivity"
             android:exported="false" />
         <activity
-            android:name="com.newzarc.newzarc.ui.ViewsApiActivity"
+            android:name="com.newzarc.newzarc.ui.admin.ViewsApiActivity"
             android:exported="false" />
         <activity
             android:name="com.newzarc.newzarc.ui.admin.DetailedActivity"
             android:exported="false" />
         <activity
-            android:name="com.newzarc.newzarc.ui.ViewsActivity"
+            android:name="com.newzarc.newzarc.ui.admin.ViewsActivity"
             android:exported="false" />
         <activity
             android:name="com.newzarc.newzarc.ui.admin.AdminActivity"
             android:exported="false" />
         <activity
-            android:name="com.newzarc.newzarc.MainActivity"
+            android:name="com.newzarc.newzarc.ui.client.MainActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

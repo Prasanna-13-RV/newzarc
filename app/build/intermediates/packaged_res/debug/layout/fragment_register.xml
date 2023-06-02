@@ -7,7 +7,7 @@
     android:background="#efefef"
     android:paddingLeft="25dp"
     android:paddingRight="25dp"
-    tools:context=".RegisterFragment">
+    tools:context=".ui.admin.fragment.RegisterFragment">
 
     <TextView
         android:textColor="@color/blackgrey"

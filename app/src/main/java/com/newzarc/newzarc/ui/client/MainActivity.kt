@@ -1,11 +1,11 @@
-package com.newzarc.newzarc
+package com.newzarc.newzarc.ui.client
 
-import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.newzarc.newzarc.R
 
 class MainActivity : AppCompatActivity() {
 

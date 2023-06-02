@@ -1,4 +1,4 @@
-package com.newzarc.newzarc.ui
+package com.newzarc.newzarc.ui.admin
 
 import android.app.Activity
 import android.content.Intent
@@ -17,9 +17,6 @@ import com.android.volley.toolbox.Volley
 import com.newzarc.newzarc.R
 import com.newzarc.newzarc.adapter.NewsAdapter
 import com.newzarc.newzarc.dataclass.News
-import com.newzarc.newzarc.ui.admin.AdminActivity
-import com.newzarc.newzarc.ui.admin.DetailedActivity
-import com.newzarc.newzarc.ui.admin.UpdateActivity
 
 
 class ViewsActivity : AppCompatActivity() {

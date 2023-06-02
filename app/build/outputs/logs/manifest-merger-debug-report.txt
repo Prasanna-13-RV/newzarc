@@ -153,36 +153,36 @@ ADDED from D:\Me\Documents\Projects\Personal\newzarc\app\src\main\AndroidManifes
 		ADDED from D:\Me\Documents\Projects\Personal\newzarc\app\src\main\AndroidManifest.xml:24:13-37
 	android:name
 		ADDED from D:\Me\Documents\Projects\Personal\newzarc\app\src\main\AndroidManifest.xml:23:13-57
-activity#com.newzarc.newzarc.ui.ViewsApiActivity
+activity#com.newzarc.newzarc.ui.admin.ViewsApiActivity
 ADDED from D:\Me\Documents\Projects\Personal\newzarc\app\src\main\AndroidManifest.xml:25:9-27:40
 	android:exported
 		ADDED from D:\Me\Documents\Projects\Personal\newzarc\app\src\main\AndroidManifest.xml:27:13-37
 	android:name
-		ADDED from D:\Me\Documents\Projects\Personal\newzarc\app\src\main\AndroidManifest.xml:26:13-48
+		ADDED from D:\Me\Documents\Projects\Personal\newzarc\app\src\main\AndroidManifest.xml:26:13-54
 activity#com.newzarc.newzarc.ui.admin.DetailedActivity
 ADDED from D:\Me\Documents\Projects\Personal\newzarc\app\src\main\AndroidManifest.xml:28:9-30:40
 	android:exported
 		ADDED from D:\Me\Documents\Projects\Personal\newzarc\app\src\main\AndroidManifest.xml:30:13-37
 	android:name
 		ADDED from D:\Me\Documents\Projects\Personal\newzarc\app\src\main\AndroidManifest.xml:29:13-54
-activity#com.newzarc.newzarc.ui.ViewsActivity
+activity#com.newzarc.newzarc.ui.admin.ViewsActivity
 ADDED from D:\Me\Documents\Projects\Personal\newzarc\app\src\main\AndroidManifest.xml:31:9-33:40
 	android:exported
 		ADDED from D:\Me\Documents\Projects\Personal\newzarc\app\src\main\AndroidManifest.xml:33:13-37
 	android:name
-		ADDED from D:\Me\Documents\Projects\Personal\newzarc\app\src\main\AndroidManifest.xml:32:13-45
+		ADDED from D:\Me\Documents\Projects\Personal\newzarc\app\src\main\AndroidManifest.xml:32:13-51
 activity#com.newzarc.newzarc.ui.admin.AdminActivity
 ADDED from D:\Me\Documents\Projects\Personal\newzarc\app\src\main\AndroidManifest.xml:34:9-36:40
 	android:exported
 		ADDED from D:\Me\Documents\Projects\Personal\newzarc\app\src\main\AndroidManifest.xml:36:13-37
 	android:name
 		ADDED from D:\Me\Documents\Projects\Personal\newzarc\app\src\main\AndroidManifest.xml:35:13-51
-activity#com.newzarc.newzarc.MainActivity
+activity#com.newzarc.newzarc.ui.client.MainActivity
 ADDED from D:\Me\Documents\Projects\Personal\newzarc\app\src\main\AndroidManifest.xml:37:9-45:20
 	android:exported
 		ADDED from D:\Me\Documents\Projects\Personal\newzarc\app\src\main\AndroidManifest.xml:39:13-36
 	android:name
-		ADDED from D:\Me\Documents\Projects\Personal\newzarc\app\src\main\AndroidManifest.xml:38:13-41
+		ADDED from D:\Me\Documents\Projects\Personal\newzarc\app\src\main\AndroidManifest.xml:38:13-51
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from D:\Me\Documents\Projects\Personal\newzarc\app\src\main\AndroidManifest.xml:40:13-44:29
 action#android.intent.action.MAIN

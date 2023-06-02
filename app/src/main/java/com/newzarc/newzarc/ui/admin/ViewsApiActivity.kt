@@ -1,4 +1,4 @@
-package com.newzarc.newzarc.ui
+package com.newzarc.newzarc.ui.admin
 
 import android.app.Activity
 import android.content.Intent
@@ -15,8 +15,6 @@ import com.android.volley.toolbox.Volley
 import com.newzarc.newzarc.R
 import com.newzarc.newzarc.adapter.NewsApiAdapter
 import com.newzarc.newzarc.dataclass.NewsApi
-import com.newzarc.newzarc.ui.admin.AdminActivity
-import com.newzarc.newzarc.ui.admin.DetailedApiActivity
 
 class ViewsApiActivity : AppCompatActivity() {
     var newsList = arrayListOf<NewsApi>()

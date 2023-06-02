@@ -11,11 +11,9 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import com.google.android.material.navigation.NavigationView
-import com.newzarc.newzarc.AddFragment
-import com.newzarc.newzarc.DashboardFragment
+import com.newzarc.newzarc.ui.admin.fragment.AddFragment
+import com.newzarc.newzarc.ui.admin.fragment.DashboardFragment
 import com.newzarc.newzarc.R
-import com.newzarc.newzarc.ui.ViewsActivity
-import com.newzarc.newzarc.ui.ViewsApiActivity
 
 class AdminActivity : AppCompatActivity() {
     private lateinit var toggle : ActionBarDrawerToggle

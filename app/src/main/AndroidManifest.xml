@@ -23,19 +23,19 @@
             android:name=".ui.admin.DetailedApiActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.ViewsApiActivity"
+            android:name=".ui.admin.ViewsApiActivity"
             android:exported="false" />
         <activity
             android:name=".ui.admin.DetailedActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.ViewsActivity"
+            android:name=".ui.admin.ViewsActivity"
             android:exported="false" />
         <activity
             android:name=".ui.admin.AdminActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.client.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

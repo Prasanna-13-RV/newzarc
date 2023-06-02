@@ -1,10 +1,11 @@
-package com.newzarc.newzarc
+package com.newzarc.newzarc.ui.admin.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.newzarc.newzarc.R
 
 class DashboardFragment : Fragment() {
 

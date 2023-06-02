@@ -1,4 +1,4 @@
-package com.newzarc.newzarc
+package com.newzarc.newzarc.ui.client.fragment
 
 import android.app.Activity
 import android.content.Intent
@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import com.newzarc.newzarc.R
 import com.newzarc.newzarc.databinding.FragmentLoginBinding
 import com.newzarc.newzarc.ui.admin.AdminActivity
 

@@ -11,7 +11,6 @@ import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.newzarc.newzarc.R
 import com.newzarc.newzarc.dataclass.News
-import com.newzarc.newzarc.ui.ViewsActivity
 
 class DetailedActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -7,17 +7,17 @@
 
     <fragment
         android:id="@+id/addFragment"
-        android:name="com.newzarc.newzarc.AddFragment"
+        android:name="com.newzarc.newzarc.ui.admin.fragment.AddFragment"
         android:label="fragment_add"
         tools:layout="@layout/fragment_add" />
     <fragment
         android:id="@+id/updateFragment"
-        android:name="com.newzarc.newzarc.UpdateFragment"
+        android:name="com.newzarc.newzarc.ui.admin.fragment.UpdateFragment"
         android:label="fragment_update"
         tools:layout="@layout/fragment_update" />
     <fragment
         android:id="@+id/dashboardFragment"
-        android:name="com.newzarc.newzarc.DashboardFragment"
+        android:name="com.newzarc.newzarc.ui.admin.fragment.DashboardFragment"
         android:label="fragment_dashboard"
         tools:layout="@layout/fragment_dashboard" />
 

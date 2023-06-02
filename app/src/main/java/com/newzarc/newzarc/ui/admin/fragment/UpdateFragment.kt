@@ -1,4 +1,4 @@
-package com.newzarc.newzarc
+package com.newzarc.newzarc.ui.admin.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

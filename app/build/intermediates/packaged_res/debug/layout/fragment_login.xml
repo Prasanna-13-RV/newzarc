@@ -7,7 +7,7 @@
     android:background="#efefef"
     android:paddingLeft="25dp"
     android:paddingRight="25dp"
-    tools:context=".LoginFragment">
+    tools:context=".ui.client.fragment.LoginFragment">
 
     <TextView
         android:textColor="@color/blackgrey"
