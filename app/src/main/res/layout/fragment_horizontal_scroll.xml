@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/fragment_field"
+    tools:context=".ui.client.fragment.HorizontalScrollFragment">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-174dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/sports"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/circularbordersolid"
+                android:elevation="5dp"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="8dp"
+                android:text="Sports"
+                android:textColor="#1e1e1e"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/food"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/circularbordersolid"
+                android:elevation="5dp"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="8dp"
+                android:text="Food"
+                android:textColor="#1e1e1e"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/business"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/circularbordersolid"
+                android:elevation="5dp"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="8dp"
+                android:text="Business"
+                android:textColor="#1e1e1e"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/health"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/circularbordersolid"
+                android:elevation="5dp"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="8dp"
+                android:text="Health"
+                android:textColor="#1e1e1e"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/science"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/circularbordersolid"
+                android:elevation="5dp"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="8dp"
+                android:text="Science"
+                android:textColor="#1e1e1e"
+                android:textSize="18dp" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</FrameLayout>

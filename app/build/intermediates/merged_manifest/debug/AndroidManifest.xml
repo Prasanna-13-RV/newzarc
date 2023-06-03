@@ -32,6 +32,12 @@
         android:theme="@style/Theme.Newzarc"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="com.newzarc.newzarc.ui.client.fragment.NewsViewActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.newzarc.newzarc.ui.client.fragment.DetailedUserActivity"
+            android:exported="false" />
+        <activity
             android:name="com.newzarc.newzarc.ui.client.ClientActivity"
             android:exported="false" />
         <activity

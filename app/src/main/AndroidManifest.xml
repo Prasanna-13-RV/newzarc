@@ -17,6 +17,12 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".ui.client.fragment.NewsViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.client.fragment.DetailedUserActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.client.ClientActivity"
             android:exported="false" />
         <activity

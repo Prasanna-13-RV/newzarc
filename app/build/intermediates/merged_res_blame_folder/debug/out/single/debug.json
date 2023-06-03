@@ -1,23 +1,43 @@
 [
     {
-        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\layout_fragment_views_api.xml.flat",
-        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\fragment_views_api.xml"
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\drawable_android.png.flat",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\drawable\\android.png"
     },
     {
-        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\mipmap-mdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\layout_fragment_home.xml.flat",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\layout_fragment_health_user.xml.flat",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\fragment_health_user.xml"
     },
     {
         "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\menu_bottom_nav.xml.flat",
         "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\menu\\bottom_nav.xml"
     },
     {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
         "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\drawable_baseline_system_update_alt_24.xml.flat",
         "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\drawable\\baseline_system_update_alt_24.xml"
     },
     {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\layout_fragment_horizontal_scroll.xml.flat",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\fragment_horizontal_scroll.xml"
+    },
+    {
         "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\layout_activity_detailed_api.xml.flat",
         "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\activity_detailed_api.xml"
+    },
+    {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\drawable_person3.jpg.flat",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\drawable\\person3.jpg"
+    },
+    {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\drawable_ic_bg.xml.flat",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\drawable\\ic_bg.xml"
     },
     {
         "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\layout_fragment_add.xml.flat",
@@ -28,8 +48,20 @@
         "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\xml\\network_security_config.xml"
     },
     {
-        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\drawable-v24\\ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\layout_fragment_sports_user.xml.flat",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\fragment_sports_user.xml"
+    },
+    {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\navigation_news_category.xml.flat",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\navigation\\news_category.xml"
+    },
+    {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\layout_activity_detailed_user.xml.flat",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\activity_detailed_user.xml"
+    },
+    {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\layout_fragment_news_view.xml.flat",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\fragment_news_view.xml"
     },
     {
         "merged": "com.newzarc.newzarc.app-merged_res-50:/layout_fragment_news_view.xml.flat",
@@ -44,6 +76,10 @@
         "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\drawable_person2.jpg.flat",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\drawable\\person2.jpg"
+    },
+    {
         "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\drawable_ic_launcher_background.xml.flat",
         "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\drawable\\ic_launcher_background.xml"
     },
@@ -52,16 +88,28 @@
         "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\fragment_dashboard.xml"
     },
     {
-        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\layout_activity_views_api.xml.flat",
-        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\activity_views_api.xml"
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\drawable_menu.png.flat",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\drawable\\menu.png"
+    },
+    {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\drawable_ic_notifications_white_24dp.xml.flat",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\drawable\\ic_notifications_white_24dp.xml"
     },
     {
         "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\drawable_baseline_home_24.xml.flat",
         "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\drawable\\baseline_home_24.xml"
     },
     {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\layout_activity_views_api.xml.flat",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\activity_views_api.xml"
+    },
+    {
         "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\drawable_paintbrush.png.flat",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\drawable\\paintbrush.png"
     },
     {
         "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\layout_fragment_login.xml.flat",
@@ -70,10 +118,6 @@
     {
         "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\layout_activity_admin.xml.flat",
         "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\activity_admin.xml"
-    },
-    {
-        "merged": "com.newzarc.newzarc.app-merged_res-50:/navigation_nav_graph.xml.flat",
-        "source": "com.newzarc.newzarc.app-main-52:/navigation/nav_graph.xml"
     },
     {
         "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\layout_nav_header.xml.flat",
@@ -88,36 +132,56 @@
         "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\layout_fragment_detailed.xml.flat",
-        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\fragment_detailed.xml"
-    },
-    {
         "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\xml_data_extraction_rules.xml.flat",
         "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\drawable_playstore.png.flat",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\drawable\\playstore.png"
     },
     {
         "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\navigation_nav_graph.xml.flat",
         "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\navigation\\nav_graph.xml"
     },
     {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\drawable_tickinsidecircle.png.flat",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\drawable\\tickinsidecircle.png"
+    },
+    {
         "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\drawable_baseline_newspaper_24.xml.flat",
         "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\drawable\\baseline_newspaper_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\drawable_circular_grey_bordersolid.xml.flat",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\drawable\\circular_grey_bordersolid.xml"
     },
     {
         "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\drawable_baseline_account_circle_24.xml.flat",
         "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\drawable\\baseline_account_circle_24.xml"
     },
     {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\drawable_circleyellowfil.xml.flat",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\drawable\\circleyellowfil.xml"
+    },
+    {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\drawable_circularbordersolid.xml.flat",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\drawable\\circularbordersolid.xml"
+    },
+    {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\layout_activity_news_view.xml.flat",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\activity_news_view.xml"
+    },
+    {
         "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\drawable_baseline_add_24.xml.flat",
         "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\drawable\\baseline_add_24.xml"
     },
     {
-        "merged": "com.newzarc.newzarc.app-merged_res-50:/layout_fragment_account_user.xml.flat",
-        "source": "com.newzarc.newzarc.app-main-52:/layout/fragment_account_user.xml"
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\layout_fragment_account_user.xml.flat",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\fragment_account_user.xml"
     },
     {
-        "merged": "com.newzarc.newzarc.app-merged_res-50:/layout_activity_client.xml.flat",
-        "source": "com.newzarc.newzarc.app-main-52:/layout/activity_client.xml"
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\drawable_ic_location_24dp.xml.flat",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\drawable\\ic_location_24dp.xml"
     },
     {
         "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\navigation_admin_navigation.xml.flat",
@@ -128,12 +192,20 @@
         "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\mipmap-hdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\layout_content_admin.xml.flat",
-        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\content_admin.xml"
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\drawable_person1.jpg.flat",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\drawable\\person1.jpg"
+    },
+    {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\drawable_ic_call_24dp.xml.flat",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\drawable\\ic_call_24dp.xml"
     },
     {
         "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\drawable_baseline_menu_24.xml.flat",
         "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\drawable\\baseline_menu_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\drawable_pp.jpg.flat",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\drawable\\pp.jpg"
     },
     {
         "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\mipmap-hdpi_ic_launcher_round.webp.flat",
@@ -148,24 +220,44 @@
         "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\layout_fragment_detailed_user.xml.flat",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\fragment_detailed_user.xml"
+    },
+    {
         "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\mipmap-xhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\layout_fragment_business_user.xml.flat",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\fragment_business_user.xml"
+    },
+    {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\drawable_ic_email_24dp.xml.flat",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\drawable\\ic_email_24dp.xml"
     },
     {
         "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\layout_activity_update.xml.flat",
         "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\activity_update.xml"
     },
     {
-        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\layout_fragment_views.xml.flat",
-        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\fragment_views.xml"
+        "merged": "com.newzarc.newzarc.app-merged_res-50:/layout_fragment_horizontal_scroll.xml.flat",
+        "source": "com.newzarc.newzarc.app-main-52:/layout/fragment_horizontal_scroll.xml"
+    },
+    {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\layout_horizontal_scroll_layout.xml.flat",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\horizontal_scroll_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\layout_fragment_science_user.xml.flat",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\fragment_science_user.xml"
     },
     {
         "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\layout_activity_views.xml.flat",
         "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\activity_views.xml"
     },
     {
-        "merged": "com.newzarc.newzarc.app-merged_res-50:/layout_fragment_home.xml.flat",
-        "source": "com.newzarc.newzarc.app-main-52:/layout/fragment_home.xml"
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\drawable_search.png.flat",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\drawable\\search.png"
     },
     {
         "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\layout_activity_main.xml.flat",
@@ -176,12 +268,20 @@
         "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\activity_detailed.xml"
     },
     {
-        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\layout_activity_client.xml.flat",
-        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\activity_client.xml"
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\layout_fragment_food_user.xml.flat",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\fragment_food_user.xml"
+    },
+    {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\drawable_star.png.flat",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\drawable\\star.png"
     },
     {
         "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\layout_activity_client.xml.flat",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\activity_client.xml"
     },
     {
         "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\layout_fragment_update.xml.flat",
@@ -200,8 +300,8 @@
         "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\news_card.xml"
     },
     {
-        "merged": "com.newzarc.newzarc.app-merged_res-50:/layout_fragment_login.xml.flat",
-        "source": "com.newzarc.newzarc.app-main-52:/layout/fragment_login.xml"
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\drawable_tickcircle.png.flat",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\drawable\\tickcircle.png"
     },
     {
         "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\mipmap-mdpi_ic_launcher.webp.flat",
@@ -210,5 +310,13 @@
     {
         "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\drawable_ic_arrow_back_24dp.xml.flat",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\drawable\\ic_arrow_back_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-merged_res-50:\\layout_user_news_card.xml.flat",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarc.app-main-52:\\layout\\user_news_card.xml"
     }
 ]

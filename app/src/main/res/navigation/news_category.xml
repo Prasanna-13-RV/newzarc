@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/news_category"
+    app:startDestination="@id/newsViewFragment">
+
+    <fragment
+        android:id="@+id/newsViewFragment"
+        android:name="com.newzarc.newzarc.ui.client.fragment.NewsViewFragment"
+        android:label="fragment_news_view"
+        tools:layout="@layout/fragment_news_view" >
+        <action
+            android:id="@+id/action_newsViewFragment_to_foodUserFragment"
+            app:destination="@id/foodUserFragment" />
+        <action
+            android:id="@+id/action_newsViewFragment_to_healthUserFragment"
+            app:destination="@id/healthUserFragment" />
+        <action
+            android:id="@+id/action_newsViewFragment_to_businessUserFragment"
+            app:destination="@id/businessUserFragment" />
+        <action
+            android:id="@+id/action_newsViewFragment_to_sportsUserFragment"
+            app:destination="@id/sportsUserFragment" />
+        <action
+            android:id="@+id/action_newsViewFragment_to_scienceUserFragment"
+            app:destination="@id/scienceUserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/foodUserFragment"
+        android:name="com.newzarc.newzarc.FoodUserFragment"
+        android:label="fragment_food_user"
+        tools:layout="@layout/fragment_food_user" />
+    <fragment
+        android:id="@+id/sportsUserFragment"
+        android:name="com.newzarc.newzarc.SportsUserFragment"
+        android:label="fragment_sports_user"
+        tools:layout="@layout/fragment_sports_user" />
+    <fragment
+        android:id="@+id/healthUserFragment"
+        android:name="com.newzarc.newzarc.HealthUserFragment"
+        android:label="fragment_health_user"
+        tools:layout="@layout/fragment_health_user" />
+    <fragment
+        android:id="@+id/businessUserFragment"
+        android:name="com.newzarc.newzarc.BusinessUserFragment"
+        android:label="fragment_business_user"
+        tools:layout="@layout/fragment_business_user" />
+    <fragment
+        android:id="@+id/scienceUserFragment"
+        android:name="com.newzarc.newzarc.ScienceUserFragment"
+        android:label="fragment_science_user"
+        tools:layout="@layout/fragment_science_user" />
+</navigation>
