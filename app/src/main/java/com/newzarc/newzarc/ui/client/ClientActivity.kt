@@ -17,26 +17,24 @@ class ClientActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityClientBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        replaceFragment(HomeFragment())
+        replaceFragment(HomeFragment(), "Home")
 
 
         binding.bottomNavigationView.setOnItemSelectedListener {
             when(it.itemId) {
-                R.id.home -> replaceFragment(HomeFragment())
-                R.id.news -> replaceFragment(NewsViewFragment())
-                R.id.account -> replaceFragment(AccountUserFragment())
+                R.id.home -> replaceFragment(HomeFragment(), "Home")
+                R.id.news -> replaceFragment(NewsViewFragment(), "News")
+                R.id.account -> replaceFragment(AccountUserFragment(), "User Details")
             }
-
             true
         }
-
-
     }
 
-    private fun replaceFragment(fragment: Fragment) {
+    private fun replaceFragment(fragment: Fragment, string: String) {
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.frameLayout, fragment)
         fragmentTransaction.commit()
+        title = string
     }
 }
