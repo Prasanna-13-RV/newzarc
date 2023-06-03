@@ -1,4 +1,4 @@
-package com.newzarc.newzarc.ui.client
+package com.newzarc.newzarc.ui
 
 import android.app.Activity
 import android.content.Intent
@@ -12,8 +12,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-
     }
 
     private fun clickMe(button: Button, activity: Activity) {

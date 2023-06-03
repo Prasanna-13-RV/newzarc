@@ -17,6 +17,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".ui.client.ClientActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.admin.UpdateActivity"
             android:exported="false" />
         <activity
@@ -35,7 +38,7 @@
             android:name=".ui.admin.AdminActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.client.MainActivity"
+            android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

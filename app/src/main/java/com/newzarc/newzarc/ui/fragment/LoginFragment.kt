@@ -1,4 +1,4 @@
-package com.newzarc.newzarc.ui.client.fragment
+package com.newzarc.newzarc.ui.fragment
 
 import android.app.Activity
 import android.content.Intent
@@ -12,6 +12,7 @@ import androidx.navigation.findNavController
 import com.newzarc.newzarc.R
 import com.newzarc.newzarc.databinding.FragmentLoginBinding
 import com.newzarc.newzarc.ui.admin.AdminActivity
+import com.newzarc.newzarc.ui.client.ClientActivity
 
 
 class LoginFragment : Fragment() {
@@ -34,15 +35,19 @@ class LoginFragment : Fragment() {
         }
 
         binding.loginButton.setOnClickListener {
-            moveToNewActivity()
+            moveToNewActivity(AdminActivity())
+        }
+
+        binding.loginGoogleButton.setOnClickListener {
+            moveToNewActivity(ClientActivity())
         }
 
         (activity as AppCompatActivity).supportActionBar?.hide()
         return binding.root
     }
 
-    private fun moveToNewActivity() {
-        val i = Intent(activity, AdminActivity::class.java)
+    private fun moveToNewActivity(act : Activity) {
+        val i = Intent(activity, act::class.java)
         startActivity(i)
         (activity as Activity?)!!.overridePendingTransition(0, 0)
     }

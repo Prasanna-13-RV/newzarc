@@ -2489,7 +2489,9 @@ drawable avd_show_password
 drawable baseline_account_circle_24
 drawable baseline_add_24
 drawable baseline_grid_view_24
+drawable baseline_home_24
 drawable baseline_menu_24
+drawable baseline_newspaper_24
 drawable baseline_system_update_alt_24
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
@@ -2609,6 +2611,7 @@ id accessibility_custom_action_6
 id accessibility_custom_action_7
 id accessibility_custom_action_8
 id accessibility_custom_action_9
+id account
 id actionDown
 id actionDownUp
 id actionUp
@@ -2662,6 +2665,7 @@ id beginning
 id bestChoice
 id blocking
 id bottom
+id bottomNavigationView
 id bounce
 id bounceBoth
 id bounceEnd
@@ -2776,6 +2780,9 @@ id fragmentContainerView
 id fragment_container_view_tag
 id frameLayout
 id frameLayout2
+id frameLayout3
+id frameLayout4
+id frameLayout5
 id frost
 id ghost_view
 id ghost_view_holder
@@ -2897,6 +2904,7 @@ id nestedScrollView
 id never
 id neverCompleteToEnd
 id neverCompleteToStart
+id news
 id newsContent
 id newsContentInput
 id newsDate
@@ -3053,7 +3061,10 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView
 id textView2
+id textView3
+id textView4
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3196,6 +3207,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_admin
+layout activity_client
 layout activity_detailed
 layout activity_detailed_api
 layout activity_main
@@ -3218,9 +3230,12 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout fragment_account_user
 layout fragment_add
 layout fragment_dashboard
+layout fragment_home
 layout fragment_login
+layout fragment_news_view
 layout fragment_register
 layout fragment_update
 layout m3_alert_dialog
@@ -3297,6 +3312,7 @@ layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
 menu admin_nav
+menu bottom_nav
 mipmap ic_launcher
 mipmap ic_launcher_round
 navigation admin_navigation
