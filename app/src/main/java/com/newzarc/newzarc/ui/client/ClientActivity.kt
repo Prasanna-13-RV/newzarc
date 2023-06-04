@@ -10,6 +10,7 @@ import com.newzarc.newzarc.R
 import com.newzarc.newzarc.databinding.ActivityClientBinding
 import com.newzarc.newzarc.ui.client.fragment.AccountUserFragment
 import com.newzarc.newzarc.ui.client.fragment.HomeFragment
+import com.newzarc.newzarc.ui.client.fragment.HomeUserFragment
 import com.newzarc.newzarc.ui.client.fragment.HorizontalScrollFragment
 import com.newzarc.newzarc.ui.client.fragment.NewsViewFragment
 
@@ -21,13 +22,13 @@ class ClientActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityClientBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        replaceFragment(HomeFragment(), "Home")
+        replaceFragment(HomeUserFragment(), "Home")
 
 
 
         binding.bottomNavigationView.setOnItemSelectedListener {
             when(it.itemId) {
-                R.id.home -> replaceFragment(HomeFragment(), "Home")
+                R.id.home -> replaceFragment(HomeUserFragment(), "Home")
                 R.id.news -> replaceFragment(NewsViewFragment(), "News")
                 R.id.account -> replaceFragment(AccountUserFragment(), "User Details")
             }

@@ -13,15 +13,11 @@ import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
-import com.newzarc.newzarc.BusinessUserFragment
-import com.newzarc.newzarc.FoodUserFragment
-import com.newzarc.newzarc.HealthUserFragment
 import com.newzarc.newzarc.R
-import com.newzarc.newzarc.ScienceUserFragment
-import com.newzarc.newzarc.SportsUserFragment
 import com.newzarc.newzarc.adapter.UserNewsAdapter
 import com.newzarc.newzarc.databinding.FragmentNewsViewBinding
 import com.newzarc.newzarc.dataclass.UserNews
+import com.newzarc.newzarc.ui.client.DetailedUserActivity
 
 class NewsViewFragment : Fragment() {
 

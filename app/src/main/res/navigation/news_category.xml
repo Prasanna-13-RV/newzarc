@@ -28,27 +28,27 @@
     </fragment>
     <fragment
         android:id="@+id/foodUserFragment"
-        android:name="com.newzarc.newzarc.FoodUserFragment"
+        android:name="com.newzarc.newzarc.ui.client.fragment.FoodUserFragment"
         android:label="fragment_food_user"
         tools:layout="@layout/fragment_food_user" />
     <fragment
         android:id="@+id/sportsUserFragment"
-        android:name="com.newzarc.newzarc.SportsUserFragment"
+        android:name="com.newzarc.newzarc.ui.client.fragment.SportsUserFragment"
         android:label="fragment_sports_user"
         tools:layout="@layout/fragment_sports_user" />
     <fragment
         android:id="@+id/healthUserFragment"
-        android:name="com.newzarc.newzarc.HealthUserFragment"
+        android:name="com.newzarc.newzarc.ui.client.fragment.HealthUserFragment"
         android:label="fragment_health_user"
         tools:layout="@layout/fragment_health_user" />
     <fragment
         android:id="@+id/businessUserFragment"
-        android:name="com.newzarc.newzarc.BusinessUserFragment"
+        android:name="com.newzarc.newzarc.ui.client.fragment.BusinessUserFragment"
         android:label="fragment_business_user"
         tools:layout="@layout/fragment_business_user" />
     <fragment
         android:id="@+id/scienceUserFragment"
-        android:name="com.newzarc.newzarc.ScienceUserFragment"
+        android:name="com.newzarc.newzarc.ui.client.fragment.ScienceUserFragment"
         android:label="fragment_science_user"
         tools:layout="@layout/fragment_science_user" />
 </navigation>

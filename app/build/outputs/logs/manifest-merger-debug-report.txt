@@ -147,12 +147,12 @@ ADDED from D:\Me\Documents\Projects\Personal\newzarc\app\src\main\AndroidManifes
 		ADDED from D:\Me\Documents\Projects\Personal\newzarc\app\src\main\AndroidManifest.xml:21:13-37
 	android:name
 		ADDED from D:\Me\Documents\Projects\Personal\newzarc\app\src\main\AndroidManifest.xml:20:13-64
-activity#com.newzarc.newzarc.ui.client.fragment.DetailedUserActivity
+activity#com.newzarc.newzarc.ui.client.DetailedUserActivity
 ADDED from D:\Me\Documents\Projects\Personal\newzarc\app\src\main\AndroidManifest.xml:22:9-24:40
 	android:exported
 		ADDED from D:\Me\Documents\Projects\Personal\newzarc\app\src\main\AndroidManifest.xml:24:13-37
 	android:name
-		ADDED from D:\Me\Documents\Projects\Personal\newzarc\app\src\main\AndroidManifest.xml:23:13-68
+		ADDED from D:\Me\Documents\Projects\Personal\newzarc\app\src\main\AndroidManifest.xml:23:13-59
 activity#com.newzarc.newzarc.ui.client.ClientActivity
 ADDED from D:\Me\Documents\Projects\Personal\newzarc\app\src\main\AndroidManifest.xml:25:9-27:40
 	android:exported

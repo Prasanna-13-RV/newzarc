@@ -1,7 +1,6 @@
 package com.newzarc.newzarc.adapter
 
 import android.content.Context
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.newzarc.newzarc.R
 import com.newzarc.newzarc.dataclass.UserNews
-import com.newzarc.newzarc.ui.client.fragment.DetailedUserActivity
 
 class UserNewsAdapter(private val newsList: ArrayList<UserNews>) :
     RecyclerView.Adapter<UserNewsAdapter.MyViewHolder>() {

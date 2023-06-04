@@ -60,8 +60,8 @@
 36-->D:\Me\Documents\Projects\Personal\newzarc\app\src\main\AndroidManifest.xml:21:13-37
 37        <activity
 37-->D:\Me\Documents\Projects\Personal\newzarc\app\src\main\AndroidManifest.xml:22:9-24:40
-38            android:name="com.newzarc.newzarc.ui.client.fragment.DetailedUserActivity"
-38-->D:\Me\Documents\Projects\Personal\newzarc\app\src\main\AndroidManifest.xml:23:13-68
+38            android:name="com.newzarc.newzarc.ui.client.DetailedUserActivity"
+38-->D:\Me\Documents\Projects\Personal\newzarc\app\src\main\AndroidManifest.xml:23:13-59
 39            android:exported="false" />
 39-->D:\Me\Documents\Projects\Personal\newzarc\app\src\main\AndroidManifest.xml:24:13-37
 40        <activity

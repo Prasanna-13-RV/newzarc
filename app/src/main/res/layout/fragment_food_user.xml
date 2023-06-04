@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#efefef"
     android:orientation="vertical"
-    tools:context=".FoodUserFragment">
+    tools:context=".ui.client.fragment.FoodUserFragment">
 
     <include layout="@layout/fragment_horizontal_scroll"/>
 

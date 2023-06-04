@@ -303,6 +303,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="About Me"
+                                android:textColor="#1e1e1e"
                                 android:textSize="17sp"
                                 android:textStyle="bold" />
 
@@ -321,6 +322,7 @@
                         </LinearLayout>
 
                         <TextView
+                            android:textColor="#1e1e1e"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
@@ -346,6 +348,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Contact"
+                            android:textColor="#1e1e1e"
                             android:textSize="17sp"
                             android:textStyle="bold" />
 
@@ -381,6 +384,7 @@
                                 android:layout_marginLeft="20dp"
                                 android:text="+91 7999193854"
                                 android:textSize="15sp"
+                                android:textColor="#1e1e1e"
                                 />
                         </LinearLayout>
 
@@ -402,6 +406,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="20dp"
+                                android:textColor="#1e1e1e"
                                 android:text="sanskar@theindianappguy.com"
                                 android:textSize="15sp"
                                 />
@@ -425,6 +430,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="20dp"
+                                android:textColor="#1e1e1e"
                                 android:text="Leeds, United Kingdom"
                                 android:textSize="15sp"
                                 />

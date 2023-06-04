@@ -3277,6 +3277,7 @@ layout fragment_dashboard
 layout fragment_food_user
 layout fragment_health_user
 layout fragment_home
+layout fragment_home_user
 layout fragment_horizontal_scroll
 layout fragment_login
 layout fragment_news_view

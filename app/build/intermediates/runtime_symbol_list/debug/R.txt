@@ -3276,6 +3276,7 @@ int layout fragment_dashboard 0x7f0b0036
 int layout fragment_food_user 0x7f0b008a
 int layout fragment_health_user 0x7f0b008b
 int layout fragment_home 0x7f0b0037
+int layout fragment_home_user 0x7f0b0090
 int layout fragment_horizontal_scroll 0x7f0b008f
 int layout fragment_login 0x7f0b0038
 int layout fragment_news_view 0x7f0b0039

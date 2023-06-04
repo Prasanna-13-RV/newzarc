@@ -5,12 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.newzarc.newzarc.BusinessUserFragment
-import com.newzarc.newzarc.FoodUserFragment
-import com.newzarc.newzarc.HealthUserFragment
 import com.newzarc.newzarc.R
-import com.newzarc.newzarc.ScienceUserFragment
-import com.newzarc.newzarc.SportsUserFragment
 import com.newzarc.newzarc.databinding.FragmentHorizontalScrollBinding
 
 class HorizontalScrollFragment : Fragment() {

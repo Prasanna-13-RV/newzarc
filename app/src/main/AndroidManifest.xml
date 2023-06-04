@@ -20,7 +20,7 @@
             android:name=".ui.client.fragment.NewsViewActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.client.fragment.DetailedUserActivity"
+            android:name=".ui.client.DetailedUserActivity"
             android:exported="false" />
         <activity
             android:name=".ui.client.ClientActivity"
