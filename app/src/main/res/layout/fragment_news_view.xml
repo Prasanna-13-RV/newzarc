@@ -9,11 +9,104 @@
     android:orientation="vertical"
     tools:context=".ui.client.fragment.NewsViewFragment">
 
-    <include layout="@layout/fragment_horizontal_scroll"/>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/newsRecycle"
+<!--    <include layout="@layout/fragment_horizontal_scroll"/>-->
+    <HorizontalScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-174dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/sports"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/circularbordersolid"
+                android:elevation="5dp"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="8dp"
+                android:text="Sports"
+                android:textColor="#1e1e1e"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/food"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/circularbordersolid"
+                android:elevation="5dp"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="8dp"
+                android:text="Food"
+                android:textColor="#1e1e1e"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/business"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/circularbordersolid"
+                android:elevation="5dp"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="8dp"
+                android:text="Business"
+                android:textColor="#1e1e1e"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/health"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/circularbordersolid"
+                android:elevation="5dp"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="8dp"
+                android:text="Health"
+                android:textColor="#1e1e1e"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/science"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/circularbordersolid"
+                android:elevation="5dp"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="8dp"
+                android:text="Science"
+                android:textColor="#1e1e1e"
+                android:textSize="18dp" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/newsRecycle"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content" />-->
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/frameLayoutnews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </androidx.fragment.app.FragmentContainerView>
 
 </LinearLayout>

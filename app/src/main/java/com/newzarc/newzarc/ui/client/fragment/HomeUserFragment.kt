@@ -19,13 +19,14 @@ import com.newzarc.newzarc.databinding.FragmentBusinessUserBinding
 import com.newzarc.newzarc.databinding.FragmentHomeUserBinding
 import com.newzarc.newzarc.dataclass.HomeNews
 import com.newzarc.newzarc.ui.client.DetailedUserActivity
+import com.newzarc.newzarc.ui.client.UserVideoDetailedActivity
 
 class HomeUserFragment : Fragment() {
 
     private lateinit var binding : FragmentHomeUserBinding
 
     var newsList = arrayListOf<HomeNews>()
-    var apiSample = "http://192.168.1.4:8080/allnews"
+    var apiSample = "http://172.16.9.52:8080/allnews"
     var recyclerView: RecyclerView? = null
 
     private lateinit var newsAdapter: HomeNewsAdapter
@@ -46,7 +47,6 @@ class HomeUserFragment : Fragment() {
         recyclerView = binding.newsRecycle
 
 
-
         val request = JsonArrayRequest(Request.Method.GET, apiSample,null, { result ->
 
             val jsonArray = result
@@ -60,7 +60,8 @@ class HomeUserFragment : Fragment() {
                     jsonObj.getString("description"),
                     jsonObj.getString("content"),
                     jsonObj.getString("pubDate"),
-                    jsonObj.getString("image_url")
+                    jsonObj.getString("image_url"),
+                    jsonObj.getString("videoUrl")
                 )
                 newsList.add(news)
             }
@@ -71,14 +72,15 @@ class HomeUserFragment : Fragment() {
             newsAdapter = HomeNewsAdapter(newsList)
             recyclerView?.adapter = newsAdapter
 
-//            newsAdapter.onItemClick = {
-//                val intent = Intent(
-//                    requireActivity().baseContext,
-//                    DetailedUserActivity::class.java
-//                )
-//                intent.putExtra("message", it)
-//                requireActivity().startActivity(intent)
-//            }
+            newsAdapter.onItemClick = {
+                val intent = Intent(
+                    requireActivity().baseContext,
+                    UserVideoDetailedActivity::class.java
+                )
+                intent.putExtra("message", it)
+
+                requireActivity().startActivity(intent)
+            }
         }, {err ->
             Log.d("Volley Example error", err.toString())
         })

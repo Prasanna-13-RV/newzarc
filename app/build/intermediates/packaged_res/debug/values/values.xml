@@ -2,14 +2,24 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="blackgrey">#1E1E1E</color>
+    <color name="colorAlert">#f44336</color>
     <color name="primary">#293859</color>
+    <color name="teal_200">#80CBC4</color>
     <color name="white">#FFFFFFFF</color>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="fragment_horizontal_margin">16dp</dimen>
     <dimen name="fragment_vertical_margin">16dp</dimen>
+    <string name="action_add_to_fav">Favourite</string>
+    <string name="action_delete">Delete</string>
     <string name="app_name">Newzarc</string>
     <string name="close">Close</string>
+    <string name="default_web_client_id" translatable="false">445610385044-m2p0qer1bc0rvbg0flsllc0qte9klokn.apps.googleusercontent.com</string>
     <string name="first_fragment_label">First Fragment</string>
+    <string name="gcm_defaultSenderId" translatable="false">445610385044</string>
+    <string name="google_api_key" translatable="false">AIzaSyDNLc8Z0utwOi7FhXs6mR0ITLz-bAu3fLo</string>
+    <string name="google_app_id" translatable="false">1:445610385044:android:779fea9d00d38b4f235e81</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDNLc8Z0utwOi7FhXs6mR0ITLz-bAu3fLo</string>
+    <string name="google_storage_bucket" translatable="false">thenewzarc.appspot.com</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
@@ -50,8 +60,10 @@
     <string name="next">Next</string>
     <string name="open">Open</string>
     <string name="previous">Previous</string>
+    <string name="project_id" translatable="false">thenewzarc</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="title_activity_admin">AdminActivity</string>
+    <string name="title_activity_user_video_detailed">UserVideoDetailedActivity</string>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         
 
@@ -71,7 +83,7 @@
 
         <item name="android:textStyle">italic</item>
     </style>
-    <style name="Base.Theme.Newzarc" parent="Theme.Material3.DayNight">
+    <style name="Base.Theme.Newzarc" parent="Theme.Material3.Light">
         
         
     </style>

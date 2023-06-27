@@ -7,7 +7,7 @@
     android:background="#efefef"
     android:paddingLeft="25dp"
     android:paddingRight="25dp"
-    tools:context=".ui.admin.fragment.RegisterFragment">
+    tools:context=".ui.fragment.RegisterFragment">
 
     <TextView
         android:textColor="@color/blackgrey"
@@ -73,7 +73,7 @@
     <EditText
         android:textColorHint="@color/blackgrey"
         android:textColor="@color/blackgrey"
-        android:id="@+id/passwordInpputSignup"
+        android:id="@+id/passwordInputSignup"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:ems="10"
@@ -183,7 +183,6 @@
         android:id="@+id/edit_news_heading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-blackgrey"
         android:text="Sign up"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"

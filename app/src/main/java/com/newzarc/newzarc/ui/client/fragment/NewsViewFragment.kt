@@ -41,55 +41,83 @@ class NewsViewFragment : Fragment() {
         binding = FragmentNewsViewBinding.inflate(inflater, container, false)
         val reqQueue : RequestQueue = Volley.newRequestQueue(activity)
 
-        recyclerView = binding.newsRecycle
+//        recyclerView = binding.newsRecycle
+
+//        binding.bottomNavigationView.setOnItemSelectedListener {
+//            when(it.itemId) {
+//                R.id.home -> replaceFragment(HomeUserFragment(), "Home")
+//                R.id.news -> replaceFragment(NewsViewFragment(), "News")
+//                R.id.account -> replaceFragment(AccountUserFragment(), "User Details")
+//            }
+//            true
+//        }
+
+        replaceFragment(FoodUserFragment(), "News")
+
+        binding.food.setOnClickListener {
+            replaceFragment(FoodUserFragment(), "Food")
+        }
+        binding.science.setOnClickListener {
+            replaceFragment(ScienceUserFragment(), "Science")
+        }
+        binding.business.setOnClickListener {
+            replaceFragment(BusinessUserFragment(), "Business")
+        }
+        binding.health.setOnClickListener {
+            replaceFragment(HealthUserFragment(), "Health")
+        }
+        binding.sports.setOnClickListener {
+            replaceFragment(SportsUserFragment(), "Sports")
+        }
 
 
 
-        val request = JsonObjectRequest(Request.Method.GET, apiSample,null, { result ->
-
-            val jsonArray = result.getJSONArray("results")
-
-            for (i in 0 until jsonArray.length()) {
-                val jsonObj = jsonArray.getJSONObject(i)
-//                Log.d("Volley Example ", jsonObj.toString())
-                val news = UserNews(
-                    jsonObj.getString("title"),
-                    jsonObj.getString("link"),
-                    jsonObj.getString("description"),
-                    jsonObj.getString("content"),
-                    jsonObj.getString("pubDate"),
-                    jsonObj.getString("image_url")
-                )
-                newsList.add(news)
-            }
-
-            recyclerView?.layoutManager = LinearLayoutManager(activity)
-            recyclerView?.adapter = UserNewsAdapter(newsList)
-
-            newsAdapter = UserNewsAdapter(newsList)
-            recyclerView?.adapter = newsAdapter
-
-            newsAdapter.onItemClick = {
-                val intent = Intent(
-                    requireActivity().baseContext,
-                    DetailedUserActivity::class.java
-                )
-                intent.putExtra("message", it)
-                requireActivity().startActivity(intent)
-            }
-        }, {err ->
-            Log.d("Volley Example error", err.toString())
-        })
-
-        reqQueue.add(request)
+//        val request = JsonObjectRequest(Request.Method.GET, apiSample,null, { result ->
+//
+//            val jsonArray = result.getJSONArray("results")
+//
+//            for (i in 0 until jsonArray.length()) {
+//                val jsonObj = jsonArray.getJSONObject(i)
+////                Log.d("Volley Example ", jsonObj.toString())
+//                val news = UserNews(
+//                    jsonObj.getString("title"),
+//                    jsonObj.getString("link"),
+//                    jsonObj.getString("description"),
+//                    jsonObj.getString("content"),
+//                    jsonObj.getString("pubDate"),
+//                    jsonObj.getString("image_url")
+//                )
+//                newsList.add(news)
+//            }
+//
+//            recyclerView?.layoutManager = LinearLayoutManager(activity)
+//            recyclerView?.adapter = UserNewsAdapter(newsList)
+//
+//            newsAdapter = UserNewsAdapter(newsList)
+//            recyclerView?.adapter = newsAdapter
+//
+//            newsAdapter.onItemClick = {
+//                val intent = Intent(
+//                    requireActivity().baseContext,
+//                    DetailedUserActivity::class.java
+//                )
+//                intent.putExtra("message", it)
+//                requireActivity().startActivity(intent)
+//            }
+//        }, {err ->
+//            Log.d("Volley Example error", err.toString())
+//        })
+//
+//        reqQueue.add(request)
         return binding.root
     }
 
-    private fun replaceFragment(fragment: Fragment) {
+
+    private fun replaceFragment(fragment: Fragment, string: String) {
         val fragmentManager = parentFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.frameLayout, fragment)
+        fragmentTransaction.replace(R.id.frameLayoutnews, fragment)
         fragmentTransaction.commit()
+        activity?.title = string
     }
-
 }

@@ -33,11 +33,12 @@ class DetailedApiActivity : AppCompatActivity() {
             description.text = news.description
             pubDate.text = news.pubDate
             link.text = news.link
-            Glide.with(applicationContext)
-                .load(news.image_url)
-                .into(image_url)
 
-            Log.d("example", news.image_url)
+            if (news.image_url != "null") {
+                Glide.with(applicationContext)
+                    .load(news.image_url)
+                    .into(image_url)
+            }
         }
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

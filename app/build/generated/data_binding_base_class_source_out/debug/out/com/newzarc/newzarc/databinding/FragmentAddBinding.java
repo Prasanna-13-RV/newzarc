@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -30,6 +32,15 @@ public final class FragmentAddBinding implements ViewBinding {
   public final Button addNews;
 
   @NonNull
+  public final Button datePicker;
+
+  @NonNull
+  public final LinearLayout datePickerView;
+
+  @NonNull
+  public final TextView dateText;
+
+  @NonNull
   public final NestedScrollView nestedScrollView;
 
   @NonNull
@@ -37,12 +48,6 @@ public final class FragmentAddBinding implements ViewBinding {
 
   @NonNull
   public final EditText newsContentInput;
-
-  @NonNull
-  public final TextInputLayout newsDate;
-
-  @NonNull
-  public final EditText newsDateInput;
 
   @NonNull
   public final TextInputLayout newsDescription;
@@ -62,27 +67,51 @@ public final class FragmentAddBinding implements ViewBinding {
   @NonNull
   public final EditText newsTitleInput;
 
+  @NonNull
+  public final TextInputLayout newsVideoUrl;
+
+  @NonNull
+  public final EditText newsVideoUrlInput;
+
+  @NonNull
+  public final Button timePicker;
+
+  @NonNull
+  public final LinearLayout timePickerView;
+
+  @NonNull
+  public final TextView timeText;
+
   private FragmentAddBinding(@NonNull FrameLayout rootView, @NonNull ConstraintLayout addContainer,
-      @NonNull Button addNews, @NonNull NestedScrollView nestedScrollView,
+      @NonNull Button addNews, @NonNull Button datePicker, @NonNull LinearLayout datePickerView,
+      @NonNull TextView dateText, @NonNull NestedScrollView nestedScrollView,
       @NonNull TextInputLayout newsContent, @NonNull EditText newsContentInput,
-      @NonNull TextInputLayout newsDate, @NonNull EditText newsDateInput,
       @NonNull TextInputLayout newsDescription, @NonNull EditText newsDescriptionInput,
       @NonNull TextInputLayout newsImageUrl, @NonNull EditText newsImageUrlInput,
-      @NonNull TextInputLayout newsTitle, @NonNull EditText newsTitleInput) {
+      @NonNull TextInputLayout newsTitle, @NonNull EditText newsTitleInput,
+      @NonNull TextInputLayout newsVideoUrl, @NonNull EditText newsVideoUrlInput,
+      @NonNull Button timePicker, @NonNull LinearLayout timePickerView,
+      @NonNull TextView timeText) {
     this.rootView = rootView;
     this.addContainer = addContainer;
     this.addNews = addNews;
+    this.datePicker = datePicker;
+    this.datePickerView = datePickerView;
+    this.dateText = dateText;
     this.nestedScrollView = nestedScrollView;
     this.newsContent = newsContent;
     this.newsContentInput = newsContentInput;
-    this.newsDate = newsDate;
-    this.newsDateInput = newsDateInput;
     this.newsDescription = newsDescription;
     this.newsDescriptionInput = newsDescriptionInput;
     this.newsImageUrl = newsImageUrl;
     this.newsImageUrlInput = newsImageUrlInput;
     this.newsTitle = newsTitle;
     this.newsTitleInput = newsTitleInput;
+    this.newsVideoUrl = newsVideoUrl;
+    this.newsVideoUrlInput = newsVideoUrlInput;
+    this.timePicker = timePicker;
+    this.timePickerView = timePickerView;
+    this.timeText = timeText;
   }
 
   @Override
@@ -124,6 +153,24 @@ public final class FragmentAddBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.datePicker;
+      Button datePicker = ViewBindings.findChildViewById(rootView, id);
+      if (datePicker == null) {
+        break missingId;
+      }
+
+      id = R.id.datePickerView;
+      LinearLayout datePickerView = ViewBindings.findChildViewById(rootView, id);
+      if (datePickerView == null) {
+        break missingId;
+      }
+
+      id = R.id.dateText;
+      TextView dateText = ViewBindings.findChildViewById(rootView, id);
+      if (dateText == null) {
+        break missingId;
+      }
+
       id = R.id.nestedScrollView;
       NestedScrollView nestedScrollView = ViewBindings.findChildViewById(rootView, id);
       if (nestedScrollView == null) {
@@ -139,18 +186,6 @@ public final class FragmentAddBinding implements ViewBinding {
       id = R.id.newsContentInput;
       EditText newsContentInput = ViewBindings.findChildViewById(rootView, id);
       if (newsContentInput == null) {
-        break missingId;
-      }
-
-      id = R.id.newsDate;
-      TextInputLayout newsDate = ViewBindings.findChildViewById(rootView, id);
-      if (newsDate == null) {
-        break missingId;
-      }
-
-      id = R.id.newsDateInput;
-      EditText newsDateInput = ViewBindings.findChildViewById(rootView, id);
-      if (newsDateInput == null) {
         break missingId;
       }
 
@@ -190,9 +225,40 @@ public final class FragmentAddBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentAddBinding((FrameLayout) rootView, addContainer, addNews, nestedScrollView,
-          newsContent, newsContentInput, newsDate, newsDateInput, newsDescription,
-          newsDescriptionInput, newsImageUrl, newsImageUrlInput, newsTitle, newsTitleInput);
+      id = R.id.newsVideoUrl;
+      TextInputLayout newsVideoUrl = ViewBindings.findChildViewById(rootView, id);
+      if (newsVideoUrl == null) {
+        break missingId;
+      }
+
+      id = R.id.newsVideoUrlInput;
+      EditText newsVideoUrlInput = ViewBindings.findChildViewById(rootView, id);
+      if (newsVideoUrlInput == null) {
+        break missingId;
+      }
+
+      id = R.id.timePicker;
+      Button timePicker = ViewBindings.findChildViewById(rootView, id);
+      if (timePicker == null) {
+        break missingId;
+      }
+
+      id = R.id.timePickerView;
+      LinearLayout timePickerView = ViewBindings.findChildViewById(rootView, id);
+      if (timePickerView == null) {
+        break missingId;
+      }
+
+      id = R.id.timeText;
+      TextView timeText = ViewBindings.findChildViewById(rootView, id);
+      if (timeText == null) {
+        break missingId;
+      }
+
+      return new FragmentAddBinding((FrameLayout) rootView, addContainer, addNews, datePicker,
+          datePickerView, dateText, nestedScrollView, newsContent, newsContentInput,
+          newsDescription, newsDescriptionInput, newsImageUrl, newsImageUrlInput, newsTitle,
+          newsTitleInput, newsVideoUrl, newsVideoUrlInput, timePicker, timePickerView, timeText);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

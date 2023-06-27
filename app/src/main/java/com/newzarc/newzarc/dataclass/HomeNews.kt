@@ -9,10 +9,12 @@ data class HomeNews(
     val description: String,
     val content: String,
     val pubDate: String,
-    val image_url: String
+    val image_url: String,
+    val videoUrl : String
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readInt(),
+        parcel.readString()!!,
         parcel.readString()!!,
         parcel.readString()!!,
         parcel.readString()!!,
@@ -28,6 +30,7 @@ data class HomeNews(
         parcel.writeString(content)
         parcel.writeString(pubDate)
         parcel.writeString(image_url)
+        parcel.writeString(videoUrl)
     }
 
     override fun describeContents(): Int {

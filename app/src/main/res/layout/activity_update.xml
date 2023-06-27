@@ -5,7 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.admin.UpdateActivity">
+    tools:context=".ui.admin.UpdateActivity"
+    android:background="#efefef"
+    >
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nestedScrollView"
@@ -26,6 +28,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/newsTitle"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:textColorHint="#8e8e8e"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -38,6 +41,8 @@
 
                 <EditText
                     android:id="@+id/newsTitleInput"
+                    android:textColor="#1e1e1e"
+                    android:background="#ffffff"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -46,6 +51,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/newsDescription"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:textColorHint="#8e8e8e"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -58,7 +64,9 @@
 
                 <EditText
                     android:id="@+id/newsDescriptionInput"
+                    android:textColor="#1e1e1e"
                     android:layout_width="match_parent"
+                    android:background="#ffffff"
                     android:layout_height="wrap_content"
                     android:gravity="start"
                     android:inputType="textMultiLine"
@@ -69,6 +77,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/newsContent"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:textColorHint="#8e8e8e"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -81,6 +90,8 @@
 
                 <EditText
                     android:id="@+id/newsContentInput"
+                    android:textColor="#1e1e1e"
+                    android:background="#ffffff"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="start"
@@ -92,6 +103,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/newsImageUrl"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:textColorHint="#8e8e8e"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -104,31 +116,101 @@
 
                 <EditText
                     android:id="@+id/newsImageUrlInput"
+                    android:textColor="#1e1e1e"
+                    android:background="#ffffff"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/newsDate"
+                android:id="@+id/newsVideoUrl"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:textColorHint="#8e8e8e"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp"
-                android:hint="Publish Date"
+                android:hint="News Video URL"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/newsImageUrl">
 
                 <EditText
-                    android:id="@+id/newsDateInput"
+                    android:id="@+id/newsVideoUrlInput"
+                    android:textColor="#1e1e1e"
+                    android:background="#ffffff"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
+
+            <LinearLayout
+                android:id="@+id/datePickerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/newsVideoUrl">
+
+                <TextView
+                    android:id="@+id/dateText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#1e1e1e"
+
+                    android:textSize="18dp"
+                    android:paddingVertical="10dp"
+                    android:paddingHorizontal="15dp"
+                    android:text="Date"
+
+                    />
+
+                <Button
+                    android:id="@+id/datePicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date picker" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/timePickerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/datePickerView">
+
+                <TextView
+                    android:id="@+id/timeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#1e1e1e"
+                    android:textSize="18dp"
+                    android:paddingVertical="10dp"
+                    android:paddingHorizontal="15dp"
+                    android:text="Time"
+                    />
+
+                <Button
+                    android:id="@+id/timePicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Time picker" />
+            </LinearLayout>
 
             <Button
                 android:id="@+id/updateNews"
@@ -140,7 +222,10 @@
                 android:text="Update News"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/newsDate" />
+                app:layout_constraintTop_toBottomOf="@+id/timePickerView" />
+
+
+
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

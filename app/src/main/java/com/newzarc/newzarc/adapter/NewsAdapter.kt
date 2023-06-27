@@ -1,6 +1,7 @@
 package com.newzarc.newzarc.adapter
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -21,7 +22,7 @@ class NewsAdapter(private val newsList: ArrayList<News>) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         context = parent.context
-        val itemView = LayoutInflater.from(context).inflate(R.layout.news_card, parent, false)
+        val itemView = LayoutInflater.from(context).inflate(R.layout.news_views_card, parent, false)
         return MyViewHolder(itemView)
     }
 
@@ -32,11 +33,7 @@ class NewsAdapter(private val newsList: ArrayList<News>) :
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currentItem = newsList[position]
 
-        if (currentItem.image_url == null) {
-            Glide.with(context).load("https://static.seekingalpha.com/uploads/2012/6/23/261750-13404618131438339-George-Acs.jpg").into(holder.itemImage)
-//            holder.itemImage.setImageURI(Uri.parse("https://static.seekingalpha.com/uploads/2012/6/23/261750-13404618131438339-George-Acs.jpg"))
-        }
-        else {
+        if (currentItem.image_url != "null") {
             Glide.with(context).load(currentItem.image_url).into(holder.itemImage)
         }
         holder.itemTitle.text = currentItem.title
@@ -46,14 +43,13 @@ class NewsAdapter(private val newsList: ArrayList<News>) :
             onItemClick?.invoke(currentItem)
         }
 
-        holder.editButton.setOnClickListener {
-            onItemEdit?.invoke(currentItem)
-        }
-
-
-        holder.deleteButton.setOnClickListener {
-            onItemDelete?.invoke(currentItem)
-        }
+//        holder.editButton.setOnClickListener {
+//            onItemEdit?.invoke(currentItem)
+//        }
+//
+//        holder.deleteButton.setOnClickListener {
+//            onItemDelete?.invoke(currentItem)
+//        }
 
 
     }
@@ -63,7 +59,5 @@ class NewsAdapter(private val newsList: ArrayList<News>) :
         val itemImage : ImageView = itemView.findViewById(R.id.newsImage)
         val itemTitle : TextView = itemView.findViewById(R.id.newsTitle)
         val itemDescription : TextView = itemView.findViewById(R.id.subtitle)
-        val deleteButton : TextView = itemView.findViewById(R.id.viewButton)
-        val editButton : TextView = itemView.findViewById(R.id.updateButton)
     }
 }

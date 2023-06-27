@@ -20,7 +20,6 @@
         cardView:cardElevation="8dp"
         >
 
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/contentsCard"
             android:layout_width="match_parent"
@@ -33,7 +32,7 @@
                 android:layout_width="146dp"
                 android:layout_height="136dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/ic_launcher_background"
+                android:src="@drawable/no_image"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 cardView:layout_constraintStart_toStartOf="parent"
@@ -44,9 +43,10 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
-                android:maxLines="2"
-                android:padding="5dp"
-                android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,"
+                android:maxLines="4"
+                android:padding="7dp"
+                android:textColor="#1e1e1e"
+                android:text="@string/lorem_ipsum"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -63,7 +63,7 @@
                 android:fontFamily="serif"
                 android:gravity="center_vertical"
                 android:lines="1"
-                android:padding="5dp"
+                android:padding="7dp"
                 android:text="News Headlines"
                 android:textAppearance="@style/TextAppearance.AppCompat.Title"
                 android:textColor="@android:color/black"
@@ -75,42 +75,6 @@
                 cardView:layout_constraintLeft_toRightOf="@id/newsImage"
                 cardView:layout_constraintRight_toRightOf="parent"
                 cardView:layout_constraintTop_toTopOf="parent" />
-
-            <Button
-                android:id="@+id/viewButton"
-                android:layout_width="wrap_content"
-                android:layout_height="35dp"
-                android:layout_marginStart="5dp"
-                android:paddingLeft="10dp"
-                android:paddingTop="0dp"
-                android:paddingRight="10dp"
-                android:paddingBottom="0dp"
-                android:text="View"
-                app:layout_constraintStart_toEndOf="@+id/newsImage"
-                app:layout_constraintTop_toBottomOf="@+id/subtitle"
-                cardView:cornerRadius="10dp"
-                cardView:layout_constraintEnd_toEndOf="parent"
-                cardView:layout_constraintHorizontal_bias="0.498"
-                cardView:layout_constraintStart_toStartOf="parent"
-                cardView:layout_constraintTop_toBottomOf="@+id/subtitle" />
-
-            <Button
-                android:id="@+id/updateButton"
-                android:layout_width="wrap_content"
-                android:layout_height="35dp"
-                android:layout_marginEnd="5dp"
-                android:paddingLeft="10dp"
-                android:paddingTop="0dp"
-                android:paddingRight="10dp"
-                android:paddingBottom="0dp"
-                android:text="Update"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/subtitle"
-                cardView:cornerRadius="10dp"
-                cardView:layout_constraintEnd_toEndOf="parent"
-                cardView:layout_constraintHorizontal_bias="0.905"
-                cardView:layout_constraintStart_toStartOf="parent"
-                cardView:layout_constraintTop_toBottomOf="@+id/subtitle" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

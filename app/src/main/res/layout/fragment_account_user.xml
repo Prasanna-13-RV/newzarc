@@ -101,11 +101,20 @@
                     app:cardCornerRadius="6dp"
                     app:cardElevation="0dp">
 
-                    <ImageView
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/userImage"
                         android:layout_width="150dp"
                         android:layout_height="90dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/pp" />
+                        android:src="@drawable/pp"
+                        />
+<!--                    <ImageView-->
+<!--                        android:id="@+id/userImage"-->
+<!--                        android:layout_width="150dp"-->
+<!--                        android:layout_height="90dp"-->
+<!--                        android:scaleType="centerCrop"-->
+<!--                        android:src="@drawable/pp" />-->
 
                 </androidx.cardview.widget.CardView>
 
@@ -114,6 +123,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
                     <TextView
+                        android:id="@+id/profile_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
@@ -322,6 +332,7 @@
                         </LinearLayout>
 
                         <TextView
+                            android:id="@+id/aboutMe"
                             android:textColor="#1e1e1e"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -379,6 +390,7 @@
                                 android:src="@drawable/ic_call_24dp" />
 
                             <TextView
+                                android:id="@+id/phone"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="20dp"
@@ -403,6 +415,7 @@
                                 android:src="@drawable/ic_email_24dp" />
 
                             <TextView
+                                android:id="@+id/email"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="20dp"
@@ -417,24 +430,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
                             android:gravity="center_vertical"
-                            android:paddingRight="8dp">
-
-                            <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
-                                android:background="@drawable/circular_grey_bordersolid"
-                                android:padding="10dp"
-                                android:src="@drawable/ic_location_24dp" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="20dp"
-                                android:textColor="#1e1e1e"
-                                android:text="Leeds, United Kingdom"
-                                android:textSize="15sp"
-                                />
-                        </LinearLayout>
+                            android:paddingRight="8dp"/>
 
                     </LinearLayout>
                 </LinearLayout>

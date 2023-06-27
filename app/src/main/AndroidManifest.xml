@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools" >
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -15,7 +15,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Newzarc"
         android:usesCleartextTraffic="true"
-        tools:targetApi="31">
+        tools:targetApi="31" >
+        <activity
+            android:name=".ui.client.UserVideoDetailedActivity"
+            android:exported="false"
+            android:label="@string/title_activity_user_video_detailed"
+            android:theme="@style/Theme.Newzarc" />
         <activity
             android:name=".ui.client.fragment.NewsViewActivity"
             android:exported="false" />
@@ -45,7 +50,7 @@
             android:exported="false" />
         <activity
             android:name=".ui.MainActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

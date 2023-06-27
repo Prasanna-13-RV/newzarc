@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.newzarc.newzarc.ui.admin.fragment.RegisterFragment"
+        android:name="com.newzarc.newzarc.ui.fragment.RegisterFragment"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" >
         <action

@@ -58,7 +58,7 @@ class FoodUserFragment : Fragment() {
                     jsonObj.getString("description"),
                     jsonObj.getString("content"),
                     jsonObj.getString("pubDate"),
-                    jsonObj.getString("image_url")
+                    jsonObj.getString("image_url"),
                 )
                 newsList.add(news)
             }

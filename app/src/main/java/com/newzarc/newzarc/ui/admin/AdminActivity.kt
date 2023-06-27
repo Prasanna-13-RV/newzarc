@@ -45,7 +45,7 @@ class AdminActivity : AppCompatActivity() {
                 R.id.addFragment -> replaceFragment(AddFragment(), it.title.toString())
 //                R.id.viewsActivity -> replaceFragment(ViewsFragment(), it.title.toString())
                 R.id.viewsActivity -> clickMe(ViewsActivity(), "View News")
-                R.id.viewsApiActivity -> clickMe(ViewsApiActivity(), "View News")
+                R.id.viewsApiActivity -> clickMe(ViewsApiActivity(), "View Api News")
                 R.id.updateFragment -> clickMe(UpdateActivity(), "Update News")
             }
             true

@@ -4,4 +4,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="blackgrey">#1E1E1E</color>
     <color name="primary">#293859</color>
+    <color name="colorAlert">#f44336</color>
+    <color name="teal_200">#80CBC4</color>
+    colorAlert
 </resources>

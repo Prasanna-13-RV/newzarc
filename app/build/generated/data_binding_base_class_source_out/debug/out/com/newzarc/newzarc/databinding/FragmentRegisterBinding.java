@@ -52,7 +52,7 @@ public final class FragmentRegisterBinding implements ViewBinding {
   public final TextView orSignup;
 
   @NonNull
-  public final EditText passwordInpputSignup;
+  public final EditText passwordInputSignup;
 
   @NonNull
   public final TextView passwordLabelsignup;
@@ -68,7 +68,7 @@ public final class FragmentRegisterBinding implements ViewBinding {
       @NonNull TextView createSubTitle, @NonNull TextView editNewsHeading,
       @NonNull EditText emailInput, @NonNull TextView emailLabel, @NonNull TextView loginLink,
       @NonNull EditText nameInput, @NonNull TextView newsHeadingLabel, @NonNull TextView orSignup,
-      @NonNull EditText passwordInpputSignup, @NonNull TextView passwordLabelsignup,
+      @NonNull EditText passwordInputSignup, @NonNull TextView passwordLabelsignup,
       @NonNull Button signupGoogle, @NonNull Button signupbutton) {
     this.rootView = rootView;
     this.conPasswordInput = conPasswordInput;
@@ -81,7 +81,7 @@ public final class FragmentRegisterBinding implements ViewBinding {
     this.nameInput = nameInput;
     this.newsHeadingLabel = newsHeadingLabel;
     this.orSignup = orSignup;
-    this.passwordInpputSignup = passwordInpputSignup;
+    this.passwordInputSignup = passwordInputSignup;
     this.passwordLabelsignup = passwordLabelsignup;
     this.signupGoogle = signupGoogle;
     this.signupbutton = signupbutton;
@@ -174,9 +174,9 @@ public final class FragmentRegisterBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.passwordInpputSignup;
-      EditText passwordInpputSignup = ViewBindings.findChildViewById(rootView, id);
-      if (passwordInpputSignup == null) {
+      id = R.id.passwordInputSignup;
+      EditText passwordInputSignup = ViewBindings.findChildViewById(rootView, id);
+      if (passwordInputSignup == null) {
         break missingId;
       }
 
@@ -200,7 +200,7 @@ public final class FragmentRegisterBinding implements ViewBinding {
 
       return new FragmentRegisterBinding((ConstraintLayout) rootView, conPasswordInput,
           conPasswordLabel, createSubTitle, editNewsHeading, emailInput, emailLabel, loginLink,
-          nameInput, newsHeadingLabel, orSignup, passwordInpputSignup, passwordLabelsignup,
+          nameInput, newsHeadingLabel, orSignup, passwordInputSignup, passwordLabelsignup,
           signupGoogle, signupbutton);
     }
     String missingId = rootView.getResources().getResourceName(id);

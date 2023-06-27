@@ -9,7 +9,7 @@
     android:orientation="vertical"
     tools:context=".ui.client.fragment.FoodUserFragment">
 
-    <include layout="@layout/fragment_horizontal_scroll"/>
+<!--    <include layout="@layout/fragment_horizontal_scroll"/>-->
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/newsRecycle"

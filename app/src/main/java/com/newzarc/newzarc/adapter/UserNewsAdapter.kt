@@ -1,6 +1,7 @@
 package com.newzarc.newzarc.adapter
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -30,12 +31,8 @@ class UserNewsAdapter(private val newsList: ArrayList<UserNews>) :
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currentItem = newsList[position]
 
-        if (currentItem.image_url.equals(null)) {
-            val imageURL : String = "https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?cs=srgb&dl=pexels-pixabay-268533.jpg&fm=jpg"
-            Glide.with(context).load(imageURL).into(holder.itemImage)
-        }
-        else {
-            Glide.with(context).load(currentItem?.image_url).into(holder.itemImage)
+        if (currentItem.image_url != "null") {
+            Glide.with(context).load(currentItem.image_url).into(holder.itemImage)
         }
 
 
@@ -48,7 +45,6 @@ class UserNewsAdapter(private val newsList: ArrayList<UserNews>) :
     }
 
     class MyViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
-
 
         val itemImage : ImageView = itemView.findViewById(R.id.newsImageUser)
         val itemTitle : TextView = itemView.findViewById(R.id.headingNews)

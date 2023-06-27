@@ -4,7 +4,6 @@ package com.newzarc.newzarc.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -38,24 +37,15 @@ public final class NewsCardBinding implements ViewBinding {
   @NonNull
   public final AppCompatTextView subtitle;
 
-  @NonNull
-  public final Button updateButton;
-
-  @NonNull
-  public final Button viewButton;
-
   private NewsCardBinding(@NonNull ConstraintLayout rootView, @NonNull CardView cardView,
       @NonNull ConstraintLayout contentsCard, @NonNull ImageView newsImage,
-      @NonNull TextView newsTitle, @NonNull AppCompatTextView subtitle,
-      @NonNull Button updateButton, @NonNull Button viewButton) {
+      @NonNull TextView newsTitle, @NonNull AppCompatTextView subtitle) {
     this.rootView = rootView;
     this.cardView = cardView;
     this.contentsCard = contentsCard;
     this.newsImage = newsImage;
     this.newsTitle = newsTitle;
     this.subtitle = subtitle;
-    this.updateButton = updateButton;
-    this.viewButton = viewButton;
   }
 
   @Override
@@ -115,20 +105,8 @@ public final class NewsCardBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.updateButton;
-      Button updateButton = ViewBindings.findChildViewById(rootView, id);
-      if (updateButton == null) {
-        break missingId;
-      }
-
-      id = R.id.viewButton;
-      Button viewButton = ViewBindings.findChildViewById(rootView, id);
-      if (viewButton == null) {
-        break missingId;
-      }
-
       return new NewsCardBinding((ConstraintLayout) rootView, cardView, contentsCard, newsImage,
-          newsTitle, subtitle, updateButton, viewButton);
+          newsTitle, subtitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -38,12 +38,11 @@ class BusinessUserFragment : Fragment() {
     ): View? {
         binding = FragmentBusinessUserBinding.inflate(inflater, container, false)
 
-
         val reqQueue : RequestQueue = Volley.newRequestQueue(activity)
 
         recyclerView = binding.newsRecycle
 
-
+        Log.d("volley", "Its working")
 
         val request = JsonObjectRequest(Request.Method.GET, apiSample,null, { result ->
 
@@ -51,14 +50,14 @@ class BusinessUserFragment : Fragment() {
 
             for (i in 0 until jsonArray.length()) {
                 val jsonObj = jsonArray.getJSONObject(i)
-//                Log.d("Volley Example ", jsonObj.toString())
+                Log.d("Volley Example ", jsonObj.toString())
                 val news = UserNews(
                     jsonObj.getString("title"),
                     jsonObj.getString("link"),
                     jsonObj.getString("description"),
                     jsonObj.getString("content"),
                     jsonObj.getString("pubDate"),
-                    jsonObj.getString("image_url")
+                    jsonObj.getString("image_url"),
                 )
                 newsList.add(news)
             }
@@ -83,6 +82,5 @@ class BusinessUserFragment : Fragment() {
 
         reqQueue.add(request)
         return binding.root
-
     }
 }

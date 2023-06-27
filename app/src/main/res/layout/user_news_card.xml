@@ -5,12 +5,13 @@
     android:layout_width="match_parent"
              android:layout_height="wrap_content"
     android:background="@drawable/circularbordersolid"
-    android:layout_margin="10dp">
+    android:layout_marginHorizontal="15dp"
+    android:layout_marginVertical="5dp"
+    >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:padding="20dp">
 
         <ImageView
@@ -21,7 +22,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/person3" />
+            android:src="@drawable/no_image" />
 
         <TextView
             android:id="@+id/headingNews"
