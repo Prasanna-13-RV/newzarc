@@ -51,10 +51,22 @@ class AccountUserFragment : Fragment() {
             Glide.with(requireContext()).load(userImage).into(binding.userImage)
         }
 
-
+        binding.editPage.setOnClickListener {
+            replaceFragment(EditAccountFragment(), "Edit Profile")
+        }
 
 
 
         return binding.root
     }
+
+    private fun replaceFragment(fragment: Fragment, string: String) {
+        val fragmentManager = parentFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.frameLayout, fragment)
+        fragmentTransaction.commit()
+//        title = string
+    }
+
+
 }

@@ -41,7 +41,6 @@ class HomeUserFragment : Fragment() {
     ): View? {
         binding = FragmentHomeUserBinding.inflate(inflater, container, false)
 
-
         val reqQueue : RequestQueue = Volley.newRequestQueue(activity)
 
         recyclerView = binding.newsRecycle

@@ -2843,6 +2843,7 @@ int id easeIn 0x7f0800cc
 int id easeInOut 0x7f0800cd
 int id easeOut 0x7f0800ce
 int id east 0x7f0800cf
+int id editPage 0x7f08025f
 int id edit_news_heading 0x7f0800d0
 int id edit_query 0x7f0800d1
 int id elastic 0x7f0800d2
@@ -3063,6 +3064,14 @@ int id phone 0x7f0801a6
 int id pin 0x7f0801a7
 int id position 0x7f0801a8
 int id postLayout 0x7f0801a9
+int id profileAbout 0x7f080260
+int id profileAboutInput 0x7f080261
+int id profileEmail 0x7f080262
+int id profileEmailInput 0x7f080263
+int id profilePhone 0x7f080264
+int id profilePhoneInput 0x7f080265
+int id profileTitle 0x7f080266
+int id profileTitleInput 0x7f080267
 int id profile_name 0x7f0801aa
 int id progress_circular 0x7f0801ab
 int id progress_horizontal 0x7f0801ac
@@ -3355,6 +3364,7 @@ int layout fragment_account_user 0x7f0b0038
 int layout fragment_add 0x7f0b0039
 int layout fragment_business_user 0x7f0b003a
 int layout fragment_dashboard 0x7f0b003b
+int layout fragment_edit_account 0x7f0b0093
 int layout fragment_food_user 0x7f0b003c
 int layout fragment_health_user 0x7f0b003d
 int layout fragment_home 0x7f0b003e

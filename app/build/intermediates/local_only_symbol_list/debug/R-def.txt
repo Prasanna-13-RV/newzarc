@@ -72,6 +72,7 @@ id datePicker
 id datePickerView
 id dateText
 id drawerLayout
+id editPage
 id edit_news_heading
 id email
 id emailInput
@@ -131,6 +132,14 @@ id passwordLabelsignup
 id passwordLogin
 id personalinfo
 id phone
+id profileAbout
+id profileAboutInput
+id profileEmail
+id profileEmailInput
+id profilePhone
+id profilePhoneInput
+id profileTitle
+id profileTitleInput
 id profile_name
 id registerFragment
 id registerPageButton
@@ -168,6 +177,7 @@ layout fragment_account_user
 layout fragment_add
 layout fragment_business_user
 layout fragment_dashboard
+layout fragment_edit_account
 layout fragment_food_user
 layout fragment_health_user
 layout fragment_home

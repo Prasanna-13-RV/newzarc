@@ -2844,6 +2844,7 @@ id easeIn
 id easeInOut
 id easeOut
 id east
+id editPage
 id edit_news_heading
 id edit_query
 id elastic
@@ -3064,6 +3065,14 @@ id phone
 id pin
 id position
 id postLayout
+id profileAbout
+id profileAboutInput
+id profileEmail
+id profileEmailInput
+id profilePhone
+id profilePhoneInput
+id profileTitle
+id profileTitleInput
 id profile_name
 id progress_circular
 id progress_horizontal
@@ -3356,6 +3365,7 @@ layout fragment_account_user
 layout fragment_add
 layout fragment_business_user
 layout fragment_dashboard
+layout fragment_edit_account
 layout fragment_food_user
 layout fragment_health_user
 layout fragment_home
