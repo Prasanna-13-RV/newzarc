@@ -10,11 +10,14 @@ const {
     getSinglePost,
     deleteSinglePost,
     deleteAllPost,
+    getPostOfUser
 } = require("../controller/postsController");
 
 router.get("/posts", getPosts);
 
 router.get("/post/:idPost", getSinglePost);
+
+router.get("/post/user/:user_id", getPostOfUser);
 
 router.post("/post/create", createPost);
 

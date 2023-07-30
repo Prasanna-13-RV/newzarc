@@ -21,11 +21,22 @@ const getSinglePost = (req, res) => {
     });
 }
 
+const getPostOfUser = (req, res) => {
+    const { user_id } = req.params;
+    db.query("SELECT * FROM postNews WHERE user_id = ?", (user_id), (err, result) => {
+        if (err) {
+            console.log(err);
+        } else {
+            res.json(result[0]);
+        }
+    });
+}
+
 const createPost = (req, res) => {
-    const { namePost, descriptionPost, imageUrlPost } = req.body;
+    const { namePost, descriptionPost, imageUrlPost, user_id } = req.body;
     db.query(
-        "INSERT INTO postNews (namePost, descriptionPost, imageUrlPost, likePost) VALUES (?, ?, ?, ?)",
-        [namePost, descriptionPost, imageUrlPost, 0],
+        "INSERT INTO postNews (namePost, descriptionPost, imageUrlPost, likePost, user_id) VALUES (?, ?, ?, ?, ?)",
+        [namePost, descriptionPost, imageUrlPost, 0, user_id],
         (err, result) => {
             if (err) {
                 console.log(err);
@@ -80,4 +91,5 @@ module.exports = {
     updatePost,
     deleteAllPost,
     deleteSinglePost,
+    getPostOfUser
 };
