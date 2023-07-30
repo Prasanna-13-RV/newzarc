@@ -4,6 +4,7 @@ const cors = require("cors")
 const morgan = require("morgan")
 
 const posts = require("./routes/post");
+const users = require("./routes/user");
 const db = require("./db");
 
 app.use(morgan())
@@ -11,6 +12,7 @@ app.use(cors())
 app.use(express.json());
 
 app.use("/api", posts);
+app.use("/api", users);
 
 app.get("/", (req, res) => {
     res.send("Hello World");
