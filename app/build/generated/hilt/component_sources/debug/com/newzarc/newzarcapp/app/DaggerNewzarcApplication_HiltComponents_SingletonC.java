@@ -36,13 +36,17 @@ import com.newzarc.newzarcapp.di.RepositoryModule;
 import com.newzarc.newzarcapp.di.RepositoryModule_ProvidesNewsRepositoryFactory;
 import com.newzarc.newzarcapp.di.RepositoryModule_ProvidesPostsRepositoryFactory;
 import com.newzarc.newzarcapp.di.UseCaseModule;
+import com.newzarc.newzarcapp.di.UseCaseModule_ProvidesCreateMyPostsUseCaseFactory;
+import com.newzarc.newzarcapp.di.UseCaseModule_ProvidesGetMyPostsUseCaseFactory;
 import com.newzarc.newzarcapp.di.UseCaseModule_ProvidesGetNewsUseCaseFactory;
 import com.newzarc.newzarcapp.di.UseCaseModule_ProvidesGetPostsUseCaseFactory;
 import com.newzarc.newzarcapp.di.UseCaseModule_ProvidesUpdateNewsUseCaseFactory;
 import com.newzarc.newzarcapp.domain.repository.NewsRepository;
 import com.newzarc.newzarcapp.domain.repository.PostsRepository;
+import com.newzarc.newzarcapp.domain.usecase.GetMyPostUseCase;
 import com.newzarc.newzarcapp.domain.usecase.GetNewsUseCase;
 import com.newzarc.newzarcapp.domain.usecase.GetPostsUseCase;
+import com.newzarc.newzarcapp.domain.usecase.PostCreateUseCase;
 import com.newzarc.newzarcapp.domain.usecase.UpdateNewsUseCase;
 import com.newzarc.newzarcapp.viewmodel.NewsViewModel;
 import com.newzarc.newzarcapp.viewmodel.NewsViewModel_HiltModules_KeyModule_ProvideFactory;
@@ -555,7 +559,7 @@ public final class DaggerNewzarcApplication_HiltComponents_SingletonC {
       public T get() {
         switch (id) {
           case 0: // com.newzarc.newzarcapp.viewmodel.NewsViewModel 
-          return (T) new NewsViewModel(singletonCImpl.providesGetNewsUseCaseProvider.get(), singletonCImpl.providesUpdateNewsUseCaseProvider.get(), singletonCImpl.providesGetPostsUseCaseProvider.get());
+          return (T) new NewsViewModel(singletonCImpl.providesGetNewsUseCaseProvider.get(), singletonCImpl.providesUpdateNewsUseCaseProvider.get(), singletonCImpl.providesGetPostsUseCaseProvider.get(), singletonCImpl.providesGetMyPostsUseCaseProvider.get(), singletonCImpl.providesCreateMyPostsUseCaseProvider.get());
 
           default: throw new AssertionError(id);
         }
@@ -678,6 +682,10 @@ public final class DaggerNewzarcApplication_HiltComponents_SingletonC {
 
     private Provider<GetPostsUseCase> providesGetPostsUseCaseProvider;
 
+    private Provider<GetMyPostUseCase> providesGetMyPostsUseCaseProvider;
+
+    private Provider<PostCreateUseCase> providesCreateMyPostsUseCaseProvider;
+
     private SingletonCImpl(ApplicationContextModule applicationContextModuleParam,
         CacheDataModule cacheDataModuleParam, DatabaseModule databaseModuleParam,
         LocalDataModule localDataModuleParam, NetModule netModuleParam,
@@ -715,6 +723,8 @@ public final class DaggerNewzarcApplication_HiltComponents_SingletonC {
       this.providePostsDataSourceProvider = DoubleCheck.provider(new SwitchingProvider<PostsRemoteDataSource>(singletonCImpl, 12));
       this.providesPostsRepositoryProvider = DoubleCheck.provider(new SwitchingProvider<PostsRepository>(singletonCImpl, 11));
       this.providesGetPostsUseCaseProvider = DoubleCheck.provider(new SwitchingProvider<GetPostsUseCase>(singletonCImpl, 10));
+      this.providesGetMyPostsUseCaseProvider = DoubleCheck.provider(new SwitchingProvider<GetMyPostUseCase>(singletonCImpl, 14));
+      this.providesCreateMyPostsUseCaseProvider = DoubleCheck.provider(new SwitchingProvider<PostCreateUseCase>(singletonCImpl, 15));
     }
 
     @Override
@@ -791,6 +801,12 @@ public final class DaggerNewzarcApplication_HiltComponents_SingletonC {
 
           case 13: // com.newzarc.newzarcapp.data.api.PostService 
           return (T) NetModule_ProvidesPostsServiceFactory.providesPostsService(singletonCImpl.netModule, singletonCImpl.providesRetrofitProvider.get());
+
+          case 14: // com.newzarc.newzarcapp.domain.usecase.GetMyPostUseCase 
+          return (T) UseCaseModule_ProvidesGetMyPostsUseCaseFactory.providesGetMyPostsUseCase(singletonCImpl.useCaseModule, singletonCImpl.providesPostsRepositoryProvider.get());
+
+          case 15: // com.newzarc.newzarcapp.domain.usecase.PostCreateUseCase 
+          return (T) UseCaseModule_ProvidesCreateMyPostsUseCaseFactory.providesCreateMyPostsUseCase(singletonCImpl.useCaseModule, singletonCImpl.providesPostsRepositoryProvider.get());
 
           default: throw new AssertionError(id);
         }

@@ -21,7 +21,7 @@ import androidx.navigation.NavController
 import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
 import com.bumptech.glide.integration.compose.GlideImage
 import com.newzarc.newzarcapp.R
-import com.newzarc.newzarcapp.data.model.NewsEntity
+import com.newzarc.newzarcapp.data.model.news.NewsEntity
 import com.newzarc.newzarcapp.ui.theme.NewzarcAppTheme
 import com.newzarc.newzarcapp.views.screens.components.TopBar
 

@@ -3,6 +3,7 @@ package com.newzarc.newzarcapp.views.screens.profile
 import android.util.Log
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -17,9 +18,11 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.CornerSize
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.MaterialTheme.colors
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Divider
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
@@ -41,6 +44,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.window.Dialog
 import androidx.navigation.NavController
 import com.newzarc.newzarcapp.R
 import com.newzarc.newzarcapp.ui.theme.NewzarcAppTheme
@@ -66,7 +70,7 @@ fun ProfileScreen(navController: NavController, openDrawer: (() -> Unit)?) {
         modifier = Modifier.fillMaxSize()
     )
     {
-        TopBar(navController,"Profile", openDrawer)
+        TopBar(navController, "Profile", openDrawer)
         Card(
             modifier = Modifier
                 .padding(12.dp)
@@ -91,11 +95,22 @@ fun ProfileScreen(navController: NavController, openDrawer: (() -> Unit)?) {
                     Text(text = "Update Your Profile")
                 }
                 if (isupdatePassword.value == true) {
-                    AlertDialog(
-                        onDismissRequest = { isupdatePassword.value = false },
-                        confirmButton = {},
-                        text = {
-                            Column {
+                    Dialog(
+                        onDismissRequest = {
+                            isupdatePassword.value = false
+                        }
+                    )
+                    {
+                        Card(
+                            modifier = Modifier,
+                            colors = CardDefaults.cardColors(
+                                containerColor = MaterialTheme.colorScheme.background,
+                            ),
+                        ) {
+                            Column(
+                                modifier = Modifier
+                                    .padding(vertical = 10.dp, horizontal = 15.dp)
+                            ) {
                                 TextField(
                                     modifier = Modifier
                                         .fillMaxWidth()
@@ -126,9 +141,19 @@ fun ProfileScreen(navController: NavController, openDrawer: (() -> Unit)?) {
                                     ),
                                     placeholder = { Text(text = "New Password") }
                                 )
+                                Button(
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .padding(top = 5.dp),
+                                    onClick = {
+                                        isupdatePassword.value = false
+                                    }
+                                ) {
+                                    Text(text = "Change your Password")
+                                }
                             }
                         }
-                    )
+                    }
                 }
                 Button(
                     modifier = Modifier

@@ -2,7 +2,7 @@ package com.newzarc.newzarcapp.data.datasourceImpl
 
 import com.newzarc.newzarcapp.data.datasource.NewsLocalDataSource
 import com.newzarc.newzarcapp.data.db.NewsDao
-import com.newzarc.newzarcapp.data.model.NewsEntity
+import com.newzarc.newzarcapp.data.model.news.NewsEntity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

@@ -16,7 +16,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.newzarc.newzarcapp.data.model.NewsEntity
+import com.newzarc.newzarcapp.data.model.news.NewsEntity
 import com.newzarc.newzarcapp.ui.theme.NewzarcAppTheme
 import com.newzarc.newzarcapp.viewmodel.NewsViewModel
 import com.newzarc.newzarcapp.views.navigation.MainScreen

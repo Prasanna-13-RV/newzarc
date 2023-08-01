@@ -1,4 +1,4 @@
-#Tue Aug 01 11:51:12 IST 2023
+#Tue Aug 01 18:31:09 IST 2023
 base.0=D\:\\Me\\Documents\\Projects\\newzarc\\newzarcapp\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=D\:\\Me\\Documents\\Projects\\newzarc\\newzarcapp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.10=D\:\\Me\\Documents\\Projects\\newzarc\\newzarcapp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\6\\classes.dex

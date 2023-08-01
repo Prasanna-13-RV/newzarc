@@ -97,7 +97,7 @@ public final class NewsDatabase_Impl extends NewsDatabase {
         final TableInfo _infoNewsEntity = new TableInfo("NewsEntity", _columnsNewsEntity, _foreignKeysNewsEntity, _indicesNewsEntity);
         final TableInfo _existingNewsEntity = TableInfo.read(_db, "NewsEntity");
         if (! _infoNewsEntity.equals(_existingNewsEntity)) {
-          return new RoomOpenHelper.ValidationResult(false, "NewsEntity(com.newzarc.newzarcapp.data.model.NewsEntity).\n"
+          return new RoomOpenHelper.ValidationResult(false, "NewsEntity(com.newzarc.newzarcapp.data.model.news.NewsEntity).\n"
                   + " Expected:\n" + _infoNewsEntity + "\n"
                   + " Found:\n" + _existingNewsEntity);
         }

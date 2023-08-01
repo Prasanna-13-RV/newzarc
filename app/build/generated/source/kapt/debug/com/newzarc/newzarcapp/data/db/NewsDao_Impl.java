@@ -10,7 +10,7 @@ import androidx.room.SharedSQLiteStatement;
 import androidx.room.util.CursorUtil;
 import androidx.room.util.DBUtil;
 import androidx.sqlite.db.SupportSQLiteStatement;
-import com.newzarc.newzarcapp.data.model.NewsEntity;
+import com.newzarc.newzarcapp.data.model.news.NewsEntity;
 import java.lang.Class;
 import java.lang.Exception;
 import java.lang.Object;

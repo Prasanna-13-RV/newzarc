@@ -37,4 +37,6 @@ class NetModule() {
     fun providesPostsService(retrofit: Retrofit) : PostService {
         return retrofit.create(PostService::class.java)
     }
+
+
 }

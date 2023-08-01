@@ -2,7 +2,6 @@ package com.newzarc.newzarcapp.views.navigation.drawernav
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
@@ -25,12 +24,13 @@ import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import coil.compose.rememberImagePainter
+import com.newzarc.newzarcapp.viewmodel.NewsViewModel
 import com.newzarc.newzarcapp.views.navigation.MainScreen
 import com.newzarc.newzarcapp.views.screens.MyPostScreen
-import com.newzarc.newzarcapp.views.screens.admin.LoginScreen
 import com.newzarc.newzarcapp.views.screens.profile.ProfileScreen
 import kotlinx.coroutines.launch
 
@@ -145,10 +145,12 @@ fun BodyContentComponent(
     currentScreen: DrawerAppScreen,
     openDrawer: () -> Unit
 ) {
+
+    val myviewmodel = hiltViewModel<NewsViewModel>()
     when (currentScreen) {
         DrawerAppScreen.Main -> MainScreen(openDrawer)
         DrawerAppScreen.Account -> ProfileScreen(navController, openDrawer)
-        DrawerAppScreen.MyPosts -> MyPostScreen(navController, openDrawer)
+        DrawerAppScreen.MyPosts -> MyPostScreen(navController,myviewmodel, openDrawer)
     }
 }
 

@@ -76,6 +76,7 @@ fun RowScope.AddItem(
             }
         },
         icon = { Icon(imageVector = screen.icon, contentDescription = screen.title) },
-        label = { if (isSelected) Text(text = screen.title) }
+//        label = { if (isSelected) Text(text = screen.title) }
+        label = { Text(text = screen.title) }
     )
 }

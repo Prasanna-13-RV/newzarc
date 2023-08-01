@@ -27,7 +27,7 @@ import com.newzarc.newzarcapp.views.screens.components.TopBar
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun UpdateProfile(navController: NavController,  openDrawer: (() -> Unit)?) {
+fun UpdateProfile(navController: NavController, openDrawer: (() -> Unit)?) {
 
     var username by remember {
         mutableStateOf("")
@@ -39,16 +39,8 @@ fun UpdateProfile(navController: NavController,  openDrawer: (() -> Unit)?) {
         mutableStateOf("")
     }
 
-    var password by remember {
-        mutableStateOf("")
-    }
-
-    var oldPassword by remember {
-        mutableStateOf("")
-    }
-
     Box(modifier = Modifier.fillMaxSize()) {
-        TopBar(navController = navController, name = "Update your Profile", openDrawer)
+        TopBar(navController, "Update your Profile", openDrawer)
         Column(
             modifier = Modifier
                 .padding(
@@ -101,8 +93,6 @@ fun UpdateProfile(navController: NavController,  openDrawer: (() -> Unit)?) {
                 ),
                 placeholder = { Text(text = "Phone") }
             )
-
-
             Button(
                 modifier = Modifier
                     .fillMaxWidth()

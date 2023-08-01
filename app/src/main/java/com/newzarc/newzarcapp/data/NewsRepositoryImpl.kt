@@ -4,7 +4,7 @@ import android.util.Log
 import com.newzarc.newzarcapp.data.datasource.NewsCacheDataSource
 import com.newzarc.newzarcapp.data.datasource.NewsLocalDataSource
 import com.newzarc.newzarcapp.data.datasource.NewsRemoteDataSource
-import com.newzarc.newzarcapp.data.model.NewsEntity
+import com.newzarc.newzarcapp.data.model.news.NewsEntity
 import com.newzarc.newzarcapp.domain.repository.NewsRepository
 
 class NewsRepositoryImpl(

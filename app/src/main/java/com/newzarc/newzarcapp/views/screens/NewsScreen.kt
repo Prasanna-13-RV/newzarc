@@ -21,7 +21,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.newzarc.newzarcapp.data.model.NewsEntity
+import com.newzarc.newzarcapp.data.model.news.NewsEntity
 import com.newzarc.newzarcapp.ui.theme.NewzarcAppTheme
 import com.newzarc.newzarcapp.viewmodel.NewsViewModel
 import com.newzarc.newzarcapp.views.screens.components.TopBar

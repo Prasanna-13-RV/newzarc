@@ -1,6 +1,6 @@
 package com.newzarc.newzarcapp.domain.usecase
 
-import com.newzarc.newzarcapp.data.model.PostEntity
+import com.newzarc.newzarcapp.data.model.post.PostEntity
 import com.newzarc.newzarcapp.domain.repository.PostsRepository
 
 class GetPostsUseCase(private val postsRepository: PostsRepository) {

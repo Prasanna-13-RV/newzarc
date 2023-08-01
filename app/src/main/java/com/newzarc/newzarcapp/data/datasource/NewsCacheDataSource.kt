@@ -1,6 +1,7 @@
 package com.newzarc.newzarcapp.data.datasource
 
-import com.newzarc.newzarcapp.data.model.NewsEntity
+
+import com.newzarc.newzarcapp.data.model.news.NewsEntity
 
 interface NewsCacheDataSource {
 

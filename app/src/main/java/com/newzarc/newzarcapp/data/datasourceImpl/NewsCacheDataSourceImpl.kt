@@ -1,7 +1,7 @@
 package com.newzarc.newzarcapp.data.datasourceImpl
 
 import com.newzarc.newzarcapp.data.datasource.NewsCacheDataSource
-import com.newzarc.newzarcapp.data.model.NewsEntity
+import com.newzarc.newzarcapp.data.model.news.NewsEntity
 
 class NewsCacheDataSourceImpl : NewsCacheDataSource {
 

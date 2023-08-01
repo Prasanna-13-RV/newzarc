@@ -64,6 +64,10 @@
         "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarcapp-main-72:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarcapp-merged_res-70:\\xml_network_security_config.xml.flat",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarcapp-main-72:\\xml\\network_security_config.xml"
+    },
+    {
         "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarcapp-merged_res-70:\\drawable_red_ike_button.png.flat",
         "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarcapp-main-72:\\drawable\\red_ike_button.png"
     },

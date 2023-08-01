@@ -1,5 +1,6 @@
 package com.newzarc.newzarcapp.views.screens
 
+import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -11,12 +12,14 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -36,13 +39,20 @@ import androidx.navigation.NavController
 import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
 import com.bumptech.glide.integration.compose.GlideImage
 import com.newzarc.newzarcapp.R
+import com.newzarc.newzarcapp.data.model.mypost.MyPostEntity
+import com.newzarc.newzarcapp.data.model.post.PostEntity
 import com.newzarc.newzarcapp.ui.theme.NewzarcAppTheme
+import com.newzarc.newzarcapp.viewmodel.NewsViewModel
 import com.newzarc.newzarcapp.views.screens.components.TopBar
 
 
 @OptIn(ExperimentalComposeUiApi::class)
 @Composable
-fun MyPostScreen(navController: NavController?, openDrawer: () -> Unit) {
+fun MyPostScreen(
+    navController: NavController?,
+    postsViewModel: NewsViewModel?,
+    openDrawer: (() -> Unit)?
+) {
     var likeButton by remember {
         mutableStateOf<Boolean>(false)
     }
@@ -50,85 +60,94 @@ fun MyPostScreen(navController: NavController?, openDrawer: () -> Unit) {
         mutableStateOf<Boolean>(false)
     }
 
-    Column {
-        TopBar(navController, "My Posts", openDrawer)
-        Column(
-            modifier = Modifier
-                .padding(horizontal = 15.dp, vertical = 10.dp)
-                .fillMaxSize()
-        ) {
+    val viewModel = postsViewModel?.getMyPosts("1")?.observeAsState()
 
-            Card {
-                Column(modifier = Modifier.padding(10.dp)) {
-                    Text(
-                        modifier = Modifier,
-                        text = "Hello",
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 24.sp,
-                    )
-//                MyPostImage("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg")
+    Log.d("Myviewmypost", viewModel?.value.toString())
+
+    if (viewModel?.value?.isNotEmpty() == true) {
+
+        Column {
+            TopBar(navController, "My Posts", openDrawer)
+            LazyColumn(
+                modifier = Modifier
+                    .padding(horizontal = 15.dp, vertical = 10.dp)
+                    .fillMaxSize()
+            ) {
+                items(viewModel?.value!!) {
+
+                    Card {
+                        Column(modifier = Modifier.padding(10.dp)) {
+                            Text(
+                                modifier = Modifier,
+                                text = "Hello",
+                                fontWeight = FontWeight.Bold,
+                                fontSize = 24.sp,
+                            )
+                            MyPostImage(it.imageUrlPost)
 //                Spacer(
 //                    modifier = Modifier.padding(90.dp)
 //                )
-                    Row(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .height(40.dp),
-                        Arrangement.SpaceBetween
-                    ) {
-                        if (likeButton) {
-                            Image(
-                                painterResource(R.drawable.red_ike_button),
-                                contentDescription = "",
-                                contentScale = ContentScale.FillHeight,
+                            Row(
                                 modifier = Modifier
-                                    .height(30.dp)
-                                    .clickable(onClick = {
-                                        likeButton = !likeButton
-                                    })
-                            )
-                        } else {
-                            Image(
-                                painterResource(R.drawable.like_button),
-                                contentDescription = "",
-                                contentScale = ContentScale.FillHeight,
+                                    .fillMaxWidth()
+                                    .height(40.dp),
+                                Arrangement.SpaceBetween
+                            ) {
+                                if (likeButton) {
+                                    Image(
+                                        painterResource(R.drawable.red_ike_button),
+                                        contentDescription = "",
+                                        contentScale = ContentScale.FillHeight,
+                                        modifier = Modifier
+                                            .height(30.dp)
+                                            .clickable(onClick = {
+                                                likeButton = !likeButton
+                                            })
+                                    )
+                                } else {
+                                    Image(
+                                        painterResource(R.drawable.like_button),
+                                        contentDescription = "",
+                                        contentScale = ContentScale.FillHeight,
+                                        modifier = Modifier
+                                            .height(30.dp)
+                                            .clickable(onClick = {
+                                                likeButton = !likeButton
+                                            })
+                                    )
+                                }
+                                Image(
+                                    painterResource(R.drawable.share_button),
+                                    contentDescription = "",
+                                    contentScale = ContentScale.Crop,
+                                    modifier = Modifier.height(30.dp)
+                                )
+                            }
+                            Text(
                                 modifier = Modifier
-                                    .height(30.dp)
+                                    .fillMaxWidth()
                                     .clickable(onClick = {
-                                        likeButton = !likeButton
-                                    })
+                                        popupButton = !popupButton
+                                    }),
+                                text = it.descriptionPost,
+                                maxLines = 2,
+                                overflow = TextOverflow.Ellipsis,
+                                fontSize = 18.sp,
                             )
-                        }
-                        Image(
-                            painterResource(R.drawable.share_button),
-                            contentDescription = "",
-                            contentScale = ContentScale.Crop,
-                            modifier = Modifier.height(30.dp)
-                        )
-                    }
-                    Text(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .clickable(onClick = {
-                                popupButton = !popupButton
-                            }),
-                        text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-                        maxLines = 2,
-                        overflow = TextOverflow.Ellipsis,
-                        fontSize = 18.sp,
-                    )
-                    if (popupButton) {
-                        Dialog(
-                            onDismissRequest = {
-                                popupButton = !popupButton
-                            },
+                            if (popupButton) {
+                                Dialog(
+                                    onDismissRequest = {
+                                        popupButton = !popupButton
+                                    },
 //                        properties = DialogProperties(
 //                            usePlatformDefaultWidth = false
 //                        )
-                        ) {
-                            PopUpContent({
-                                popupButton = !popupButton
-                            })
+                                ) {
+                                    PopUpContent({
+                                        popupButton = !popupButton
+                                    }, it)
+                                }
+                            }
                         }
                     }
                 }
@@ -144,7 +163,10 @@ fun MyPostImage(path: String) {
         GlideImage(
             model = path,
             contentDescription = "Image",
-            modifier = Modifier.padding(vertical = 5.dp)
+            modifier = Modifier
+                .padding(vertical = 5.dp)
+                .height(200.dp)
+                .fillMaxWidth()
         ) {
             it.error(R.drawable.ic_launcher_foreground)
                 .placeholder(R.drawable.ic_launcher_background)
@@ -155,7 +177,7 @@ fun MyPostImage(path: String) {
 
 
 @Composable
-fun PopUpContent(function: () -> Unit) {
+fun PopUpContent(function: () -> Unit, post: MyPostEntity) {
 
     Surface(
         modifier = Modifier
@@ -176,7 +198,7 @@ fun PopUpContent(function: () -> Unit) {
                     ) {
                         Text(
                             modifier = Modifier,
-                            text = "Hello",
+                            text = post.namePost,
                             fontWeight = FontWeight.Bold,
                             fontSize = 24.sp,
                         )
@@ -191,9 +213,10 @@ fun PopUpContent(function: () -> Unit) {
                         )
                     }
 //                    NewsImage("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg")
+                    NewsImage(path = post.imageUrlPost)
                     Text(
                         modifier = Modifier.fillMaxWidth(),
-                        text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+                        text = post.descriptionPost,
                         fontSize = 18.sp,
                         textAlign = TextAlign.Justify
                     )
@@ -209,6 +232,6 @@ fun PopUpContent(function: () -> Unit) {
 @Composable
 fun MyPostScreenPreview() {
     NewzarcAppTheme {
-        MyPostScreen(null, null!!)
+        MyPostScreen(null, null, null)
     }
 }

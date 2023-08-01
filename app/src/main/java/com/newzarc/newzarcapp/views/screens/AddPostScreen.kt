@@ -1,5 +1,6 @@
 package com.newzarc.newzarcapp.views.screens
 
+import android.util.Log
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -23,19 +24,27 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.newzarc.newzarcapp.data.model.mypost.MyPostEntity
 import com.newzarc.newzarcapp.ui.theme.NewzarcAppTheme
 import com.newzarc.newzarcapp.views.screens.components.TopBar
+import kotlin.random.Random
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AddPostScreen(navController: NavController?, openDrawer: (() -> Unit)?) {
 
-    var title by remember {
+    var namePost by remember {
         mutableStateOf("")
     }
-    var description by remember {
+
+    var descriptionPost by remember {
         mutableStateOf("")
     }
+
+    var imageUrlPost by remember {
+        mutableStateOf("")
+    }
+
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -54,8 +63,8 @@ fun AddPostScreen(navController: NavController?, openDrawer: (() -> Unit)?) {
                     .fillMaxWidth()
                     .padding(vertical = 5.dp),
                 shape = RoundedCornerShape(8.dp),
-                value = title,
-                onValueChange = { ti -> title = ti },
+                value = namePost,
+                onValueChange = { ti -> namePost = ti },
                 colors = TextFieldDefaults.textFieldColors(
                     disabledIndicatorColor = Color.Transparent,
                     focusedIndicatorColor = Color.Transparent,
@@ -70,8 +79,25 @@ fun AddPostScreen(navController: NavController?, openDrawer: (() -> Unit)?) {
                     .fillMaxWidth()
                     .padding(vertical = 5.dp),
                 shape = RoundedCornerShape(8.dp),
-                value = description,
-                onValueChange = { ti -> description = ti },
+                value = imageUrlPost,
+                onValueChange = { ti -> imageUrlPost = ti },
+                colors = TextFieldDefaults.textFieldColors(
+                    disabledIndicatorColor = Color.Transparent,
+                    focusedIndicatorColor = Color.Transparent,
+                    errorIndicatorColor = Color.Transparent,
+                    unfocusedIndicatorColor = Color.Transparent
+                ),
+                placeholder = { Text(text = "Image Url") },
+                singleLine = false,
+            )
+            Spacer(modifier = Modifier.height(10.dp))
+            TextField(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(vertical = 5.dp),
+                shape = RoundedCornerShape(8.dp),
+                value = descriptionPost,
+                onValueChange = { ti -> descriptionPost = ti },
                 colors = TextFieldDefaults.textFieldColors(
                     disabledIndicatorColor = Color.Transparent,
                     focusedIndicatorColor = Color.Transparent,
@@ -81,19 +107,28 @@ fun AddPostScreen(navController: NavController?, openDrawer: (() -> Unit)?) {
                 placeholder = { Text(text = "Description") },
                 singleLine = false,
             )
+
             Spacer(modifier = Modifier.height(10.dp))
             Button(modifier = Modifier
                 .fillMaxWidth()
                 .padding(top = 5.dp),
-                onClick = {}) {
+                onClick = {
+                    val post = MyPostEntity(
+                        namePost = namePost,
+                        imageUrlPost = imageUrlPost,
+                        descriptionPost = descriptionPost,
+                        user_id = 2,
+                        likePost = 0,
+                        idPost = Random.nextInt(1000, 2000)
+                    )
+
+                    Log.d("post", post.toString())
+                }) {
                 Text(text = "Add Arcs")
             }
         }
     }
 }
-
-
-
 
 @Preview(showBackground = true)
 @Composable

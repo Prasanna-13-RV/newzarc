@@ -44,7 +44,7 @@ import androidx.navigation.compose.rememberNavController
 import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
 import com.bumptech.glide.integration.compose.GlideImage
 import com.newzarc.newzarcapp.R
-import com.newzarc.newzarcapp.data.model.PostEntity
+import com.newzarc.newzarcapp.data.model.post.PostEntity
 import com.newzarc.newzarcapp.ui.theme.NewzarcAppTheme
 import com.newzarc.newzarcapp.viewmodel.NewsViewModel
 import com.newzarc.newzarcapp.views.screens.components.RoundedImage
@@ -73,44 +73,48 @@ fun PostScreen(
 //        )
 //    )
 
-//    Log.d("viewmodel", viewModel.value.toString())
-
+    Log.d("viewmodel", viewModel?.value.toString())
 
     Column() {
-//        TopBar(navController = navController, name = "Posts", openDrawer)
+        TopBar(navController = navController, name = "Posts", openDrawer)
 
-        Box(
-            modifier = Modifier
-                .padding(horizontal = 15.dp)
-                .fillMaxSize()
-        ) {
-            LazyColumn(modifier = Modifier.padding(bottom = 20.dp)) {
-                if (viewModel?.value?.isNotEmpty() == true) {
-                    items(viewModel.value!!) {
+        if (viewModel?.value?.isNotEmpty() == true) {
+            Box(
+                modifier = Modifier
+                    .padding(horizontal = 15.dp)
+                    .fillMaxSize()
+            ) {
+                LazyColumn(modifier = Modifier.padding(bottom = 20.dp)) {
+                    if (viewModel.value?.isNotEmpty() == true) {
+                        items(viewModel.value!!) {
 
-                        var likeButton by remember {
-                            mutableStateOf<Boolean>(false)
-                        }
-                        var popupButton by remember {
-                            mutableStateOf<Boolean>(false)
-                        }
-                        Card(modifier = Modifier.padding(vertical = 15.dp)) {
-                            Column(
-                                modifier = Modifier.padding(10.dp),
-                                horizontalAlignment = Alignment.CenterHorizontally
-                            ) {
-                                Row(
-                                    modifier = Modifier.fillMaxWidth(),
-                                    Arrangement.SpaceBetween
+                            var likeButton by remember {
+                                mutableStateOf<Boolean>(false)
+                            }
+                            var popupButton by remember {
+                                mutableStateOf<Boolean>(false)
+                            }
+                            Card(modifier = Modifier.padding(vertical = 15.dp)) {
+                                Column(
+                                    modifier = Modifier.padding(10.dp),
+                                    horizontalAlignment = Alignment.CenterHorizontally
                                 ) {
-                                    RoundedImage(it.image_user, 40)
-                                    Text(
-                                        modifier = Modifier,
-                                        text = it.name_user,
-                                        fontWeight = FontWeight.Bold,
-                                        fontSize = 24.sp,
-                                    )
-                                }
+                                    Row(
+                                        modifier = Modifier.fillMaxWidth(),
+                                        Arrangement.SpaceBetween
+                                    ) {
+
+                                        var imageUrl =
+                                            if (it.image_user != null) it.image_user else "https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80"
+
+                                        RoundedImage(imageUrl, 40)
+                                        Text(
+                                            modifier = Modifier,
+                                            text = it.name_user,
+                                            fontWeight = FontWeight.Bold,
+                                            fontSize = 24.sp,
+                                        )
+                                    }
 //                                Text(
 //                                    modifier = Modifier,
 //                                    text = it.namePost,
@@ -118,74 +122,75 @@ fun PostScreen(
 //                                    fontSize = 24.sp,
 //                                )
 //                                NewsImage("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg")
-                                NewsImage(path = it.imageUrlPost)
+                                    NewsImage(path = it.imageUrlPost)
 //                                Spacer(
 //                                    modifier = Modifier.padding(90.dp)
 //                                )
-                                Row(
-                                    modifier = Modifier
-                                        .fillMaxWidth()
-                                        .height(40.dp),
-                                    Arrangement.SpaceBetween
-                                ) {
+                                    Row(
+                                        modifier = Modifier
+                                            .fillMaxWidth()
+                                            .height(40.dp),
+                                        Arrangement.SpaceBetween
+                                    ) {
 
-                                    if (likeButton) {
+                                        if (likeButton) {
+                                            Image(
+                                                painterResource(R.drawable.red_ike_button),
+                                                contentDescription = "",
+                                                contentScale = ContentScale.FillHeight,
+                                                modifier = Modifier
+                                                    .height(30.dp)
+                                                    .clickable(onClick = {
+                                                        likeButton = !likeButton
+                                                    })
+                                            )
+                                        } else {
+                                            Image(
+                                                painterResource(R.drawable.like_button),
+                                                contentDescription = "",
+                                                contentScale = ContentScale.FillHeight,
+                                                modifier = Modifier
+                                                    .height(30.dp)
+                                                    .clickable(onClick = {
+                                                        likeButton = !likeButton
+                                                    })
+                                            )
+                                        }
                                         Image(
-                                            painterResource(R.drawable.red_ike_button),
+                                            painterResource(R.drawable.share_button),
                                             contentDescription = "",
-                                            contentScale = ContentScale.FillHeight,
-                                            modifier = Modifier
-                                                .height(30.dp)
-                                                .clickable(onClick = {
-                                                    likeButton = !likeButton
-                                                })
-                                        )
-                                    } else {
-                                        Image(
-                                            painterResource(R.drawable.like_button),
-                                            contentDescription = "",
-                                            contentScale = ContentScale.FillHeight,
-                                            modifier = Modifier
-                                                .height(30.dp)
-                                                .clickable(onClick = {
-                                                    likeButton = !likeButton
-                                                })
+                                            contentScale = ContentScale.Crop,
+                                            modifier = Modifier.height(30.dp)
                                         )
                                     }
-                                    Image(
-                                        painterResource(R.drawable.share_button),
-                                        contentDescription = "",
-                                        contentScale = ContentScale.Crop,
-                                        modifier = Modifier.height(30.dp)
+                                    Text(
+                                        modifier = Modifier
+                                            .fillMaxWidth()
+                                            .clickable(onClick = {
+                                                popupButton = !popupButton
+                                            }),
+                                        text = it.namePost,
+                                        maxLines = 2,
+                                        overflow = TextOverflow.Ellipsis,
+                                        fontSize = 18.sp,
                                     )
-                                }
-                                Text(
-                                    modifier = Modifier
-                                        .fillMaxWidth()
-                                        .clickable(onClick = {
-                                            popupButton = !popupButton
-                                        }),
-                                    text = it.namePost,
-                                    maxLines = 2,
-                                    overflow = TextOverflow.Ellipsis,
-                                    fontSize = 18.sp,
-                                )
-                                if (popupButton) {
-                                    Dialog(
-                                        onDismissRequest = {
-                                            popupButton = !popupButton
-                                        },
-                                    ) {
-                                        PopUpPostContent(
-                                            it
-                                        ) { popupButton = !popupButton }
+                                    if (popupButton) {
+                                        Dialog(
+                                            onDismissRequest = {
+                                                popupButton = !popupButton
+                                            },
+                                        ) {
+                                            PopUpPostContent(
+                                                it
+                                            ) { popupButton = !popupButton }
+                                        }
                                     }
                                 }
                             }
                         }
                     }
-                }
 
+                }
             }
         }
     }
@@ -228,9 +233,11 @@ fun PopUpPostContent(post: PostEntity, function: () -> Unit) {
 //                                .align(Alignment.TopEnd)
                         )
                     }
-                    Column(modifier = Modifier
-                        .fillMaxWidth()
-                        .align(Alignment.Center)) {
+                    Column(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .align(Alignment.Center)
+                    ) {
                         Text(
                             modifier = Modifier,
                             text = post.namePost,
@@ -270,7 +277,6 @@ fun NewsImage(path: String) {
         }
     }
 }
-
 
 
 //@Preview(showBackground = true)
