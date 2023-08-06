@@ -8,12 +8,12 @@
         "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarcapp-main-72:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarcapp-merged_res-70:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarcapp-main-72:\\mipmap-anydpi-v26\\ic_launcher.xml"
-    },
-    {
         "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarcapp-merged_res-70:\\drawable-v24_ic_launcher_foreground.xml.flat",
         "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarcapp-main-72:\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarcapp-merged_res-70:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\prasa\\.gradle\\daemon\\8.0\\com.newzarc.newzarcapp-main-72:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
         "merged": "com.newzarc.newzarcapp-merged_res-70:/xml_network_security_config.xml.flat",

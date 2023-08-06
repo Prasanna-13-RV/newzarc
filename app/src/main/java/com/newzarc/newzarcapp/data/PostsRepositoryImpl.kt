@@ -27,7 +27,6 @@ class PostsRepositoryImpl(
         createdList.value = response
 
         return response
-
     }
 
     private suspend fun getPostsFromApi(): List<PostEntity> {

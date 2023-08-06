@@ -6,6 +6,8 @@ import com.newzarc.newzarcapp.domain.usecase.GetNewsUseCase;
 import com.newzarc.newzarcapp.domain.usecase.GetPostsUseCase;
 import com.newzarc.newzarcapp.domain.usecase.PostCreateUseCase;
 import com.newzarc.newzarcapp.domain.usecase.UpdateNewsUseCase;
+import com.newzarc.newzarcapp.domain.usecase.user.GetUserUserCase;
+import com.newzarc.newzarcapp.domain.usecase.user.PostCreateUserUseCase;
 import dagger.internal.DaggerGenerated;
 import dagger.internal.Factory;
 import dagger.internal.QualifierMetadata;
@@ -30,34 +32,45 @@ public final class NewsViewModel_Factory implements Factory<NewsViewModel> {
 
   private final Provider<PostCreateUseCase> postCreateUseCaseProvider;
 
+  private final Provider<GetUserUserCase> getUserUserCaseProvider;
+
+  private final Provider<PostCreateUserUseCase> postCreateUserUseCaseProvider;
+
   public NewsViewModel_Factory(Provider<GetNewsUseCase> getNewsUseCaseProvider,
       Provider<UpdateNewsUseCase> updateNewsUseCaseProvider,
       Provider<GetPostsUseCase> getPostsUseCaseProvider,
       Provider<GetMyPostUseCase> getMyPostUseCaseProvider,
-      Provider<PostCreateUseCase> postCreateUseCaseProvider) {
+      Provider<PostCreateUseCase> postCreateUseCaseProvider,
+      Provider<GetUserUserCase> getUserUserCaseProvider,
+      Provider<PostCreateUserUseCase> postCreateUserUseCaseProvider) {
     this.getNewsUseCaseProvider = getNewsUseCaseProvider;
     this.updateNewsUseCaseProvider = updateNewsUseCaseProvider;
     this.getPostsUseCaseProvider = getPostsUseCaseProvider;
     this.getMyPostUseCaseProvider = getMyPostUseCaseProvider;
     this.postCreateUseCaseProvider = postCreateUseCaseProvider;
+    this.getUserUserCaseProvider = getUserUserCaseProvider;
+    this.postCreateUserUseCaseProvider = postCreateUserUseCaseProvider;
   }
 
   @Override
   public NewsViewModel get() {
-    return newInstance(getNewsUseCaseProvider.get(), updateNewsUseCaseProvider.get(), getPostsUseCaseProvider.get(), getMyPostUseCaseProvider.get(), postCreateUseCaseProvider.get());
+    return newInstance(getNewsUseCaseProvider.get(), updateNewsUseCaseProvider.get(), getPostsUseCaseProvider.get(), getMyPostUseCaseProvider.get(), postCreateUseCaseProvider.get(), getUserUserCaseProvider.get(), postCreateUserUseCaseProvider.get());
   }
 
   public static NewsViewModel_Factory create(Provider<GetNewsUseCase> getNewsUseCaseProvider,
       Provider<UpdateNewsUseCase> updateNewsUseCaseProvider,
       Provider<GetPostsUseCase> getPostsUseCaseProvider,
       Provider<GetMyPostUseCase> getMyPostUseCaseProvider,
-      Provider<PostCreateUseCase> postCreateUseCaseProvider) {
-    return new NewsViewModel_Factory(getNewsUseCaseProvider, updateNewsUseCaseProvider, getPostsUseCaseProvider, getMyPostUseCaseProvider, postCreateUseCaseProvider);
+      Provider<PostCreateUseCase> postCreateUseCaseProvider,
+      Provider<GetUserUserCase> getUserUserCaseProvider,
+      Provider<PostCreateUserUseCase> postCreateUserUseCaseProvider) {
+    return new NewsViewModel_Factory(getNewsUseCaseProvider, updateNewsUseCaseProvider, getPostsUseCaseProvider, getMyPostUseCaseProvider, postCreateUseCaseProvider, getUserUserCaseProvider, postCreateUserUseCaseProvider);
   }
 
   public static NewsViewModel newInstance(GetNewsUseCase getNewsUseCase,
       UpdateNewsUseCase updateNewsUseCase, GetPostsUseCase getPostsUseCase,
-      GetMyPostUseCase getMyPostUseCase, PostCreateUseCase postCreateUseCase) {
-    return new NewsViewModel(getNewsUseCase, updateNewsUseCase, getPostsUseCase, getMyPostUseCase, postCreateUseCase);
+      GetMyPostUseCase getMyPostUseCase, PostCreateUseCase postCreateUseCase,
+      GetUserUserCase getUserUserCase, PostCreateUserUseCase postCreateUserUseCase) {
+    return new NewsViewModel(getNewsUseCase, updateNewsUseCase, getPostsUseCase, getMyPostUseCase, postCreateUseCase, getUserUserCase, postCreateUserUseCase);
   }
 }

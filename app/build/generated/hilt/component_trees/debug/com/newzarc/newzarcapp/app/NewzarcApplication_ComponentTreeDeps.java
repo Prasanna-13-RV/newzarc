@@ -20,7 +20,6 @@ import dagger.hilt.processor.internal.definecomponent.codegen._dagger_hilt_compo
 import hilt_aggregated_deps._androidx_hilt_work_HiltWrapper_WorkerFactoryModule;
 import hilt_aggregated_deps._com_newzarc_newzarcapp_MainActivity_GeneratedInjector;
 import hilt_aggregated_deps._com_newzarc_newzarcapp_app_NewzarcApplication_GeneratedInjector;
-import hilt_aggregated_deps._com_newzarc_newzarcapp_di_AppModule;
 import hilt_aggregated_deps._com_newzarc_newzarcapp_di_CacheDataModule;
 import hilt_aggregated_deps._com_newzarc_newzarcapp_di_DatabaseModule;
 import hilt_aggregated_deps._com_newzarc_newzarcapp_di_LocalDataModule;
@@ -72,7 +71,6 @@ import hilt_aggregated_deps._dagger_hilt_android_internal_modules_HiltWrapper_Ac
         _androidx_hilt_work_HiltWrapper_WorkerFactoryModule.class,
         _com_newzarc_newzarcapp_MainActivity_GeneratedInjector.class,
         _com_newzarc_newzarcapp_app_NewzarcApplication_GeneratedInjector.class,
-        _com_newzarc_newzarcapp_di_AppModule.class,
         _com_newzarc_newzarcapp_di_CacheDataModule.class,
         _com_newzarc_newzarcapp_di_DatabaseModule.class,
         _com_newzarc_newzarcapp_di_LocalDataModule.class,

@@ -2,15 +2,19 @@ package com.newzarc.newzarcapp.di
 
 import com.newzarc.newzarcapp.data.api.NewsService
 import com.newzarc.newzarcapp.data.api.PostService
+import com.newzarc.newzarcapp.data.api.UserService
 import com.newzarc.newzarcapp.data.datasource.NewsRemoteDataSource
 import com.newzarc.newzarcapp.data.datasource.PostsRemoteDataSource
+import com.newzarc.newzarcapp.data.datasource.UserRemoteDataSource
 import com.newzarc.newzarcapp.data.datasourceImpl.NewsRemoteDataSourceImpl
 import com.newzarc.newzarcapp.data.datasourceImpl.PostsRemoteDataSourceImpl
+import com.newzarc.newzarcapp.data.datasourceImpl.UserRemoteDataSourceImpl
 import com.newzarc.newzarcapp.utils.Contants.Companion.API_KEY
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import okhttp3.internal.userAgent
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -32,5 +36,11 @@ class RemoteDataModule {
     @Provides
     fun providePostsDataSource(postService: PostService) : PostsRemoteDataSource {
         return PostsRemoteDataSourceImpl(postService)
+    }
+
+    @Singleton
+    @Provides
+    fun provideUserDataSource(userService: UserService) : UserRemoteDataSource {
+        return UserRemoteDataSourceImpl(userService)
     }
 }

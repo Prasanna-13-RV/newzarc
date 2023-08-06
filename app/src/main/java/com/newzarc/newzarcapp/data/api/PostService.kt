@@ -13,18 +13,15 @@ import retrofit2.http.Path
 
 interface PostService {
 
-//    @GET("https://newzarc-server.onrender.com/api/posts/")
-    @GET("http://192.168.1.15:8080/api/allposts")
+    @GET("allposts")
     suspend fun getAllPosts() : Response<PostList>
 
-    @GET("http://192.168.1.15:8080/api/post/user/{id}")
+    @GET("post/user/{id}")
     suspend fun getMyPosts(
         @Path("id") userId : String
     ) : Response<MyPostList>
 
-
-    @POST("http://192.168.1.15:8080/api/post/create")
+    @POST("post/create")
     suspend fun createPost(@Body post : MyPostEntity): Response<MyPostEntity>
-
 
 }

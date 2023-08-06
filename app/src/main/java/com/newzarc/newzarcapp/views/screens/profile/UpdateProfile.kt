@@ -40,7 +40,7 @@ fun UpdateProfile(navController: NavController, openDrawer: (() -> Unit)?) {
     }
 
     Box(modifier = Modifier.fillMaxSize()) {
-        TopBar(navController, "Update your Profile", openDrawer)
+        TopBar(navController, "Update your Profile", openDrawer, null)
         Column(
             modifier = Modifier
                 .padding(

@@ -6,19 +6,19 @@ import java.lang.System;
 public abstract interface PostService {
     
     @org.jetbrains.annotations.Nullable
-    @retrofit2.http.GET(value = "http://192.168.1.15:8080/api/allposts")
+    @retrofit2.http.GET(value = "allposts")
     public abstract java.lang.Object getAllPosts(@org.jetbrains.annotations.NotNull
     kotlin.coroutines.Continuation<? super retrofit2.Response<com.newzarc.newzarcapp.data.model.post.PostList>> continuation);
     
     @org.jetbrains.annotations.Nullable
-    @retrofit2.http.GET(value = "http://192.168.1.15:8080/api/post/user/{id}")
+    @retrofit2.http.GET(value = "post/user/{id}")
     public abstract java.lang.Object getMyPosts(@org.jetbrains.annotations.NotNull
     @retrofit2.http.Path(value = "id")
     java.lang.String userId, @org.jetbrains.annotations.NotNull
     kotlin.coroutines.Continuation<? super retrofit2.Response<com.newzarc.newzarcapp.data.model.mypost.MyPostList>> continuation);
     
     @org.jetbrains.annotations.Nullable
-    @retrofit2.http.POST(value = "http://192.168.1.15:8080/api/post/create")
+    @retrofit2.http.POST(value = "post/create")
     public abstract java.lang.Object createPost(@org.jetbrains.annotations.NotNull
     @retrofit2.http.Body
     com.newzarc.newzarcapp.data.model.mypost.MyPostEntity post, @org.jetbrains.annotations.NotNull

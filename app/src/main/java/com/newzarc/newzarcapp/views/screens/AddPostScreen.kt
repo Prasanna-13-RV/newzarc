@@ -21,17 +21,23 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.newzarc.newzarcapp.data.model.mypost.MyPostEntity
 import com.newzarc.newzarcapp.ui.theme.NewzarcAppTheme
+import com.newzarc.newzarcapp.viewmodel.NewsViewModel
 import com.newzarc.newzarcapp.views.screens.components.TopBar
 import kotlin.random.Random
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun AddPostScreen(navController: NavController?, openDrawer: (() -> Unit)?) {
+fun AddPostScreen(
+    navController: NavController,
+    myviewmodel: NewsViewModel,
+    openDrawer: (() -> Unit)?
+) {
 
     var namePost by remember {
         mutableStateOf("")
@@ -45,11 +51,13 @@ fun AddPostScreen(navController: NavController?, openDrawer: (() -> Unit)?) {
         mutableStateOf("")
     }
 
+    val context = LocalContext.current
+
     Column(
         modifier = Modifier
             .fillMaxSize()
     ) {
-        TopBar(navController, "Add Your Post", openDrawer)
+        TopBar(navController, "Add Your Post", openDrawer, null)
         Column(
             modifier = Modifier
                 .padding(
@@ -117,10 +125,12 @@ fun AddPostScreen(navController: NavController?, openDrawer: (() -> Unit)?) {
                         namePost = namePost,
                         imageUrlPost = imageUrlPost,
                         descriptionPost = descriptionPost,
-                        user_id = 2,
+                        user_id = 1,
                         likePost = 0,
                         idPost = Random.nextInt(1000, 2000)
                     )
+
+                    myviewmodel.createPost(post, context)
 
                     Log.d("post", post.toString())
                 }) {
@@ -130,10 +140,10 @@ fun AddPostScreen(navController: NavController?, openDrawer: (() -> Unit)?) {
     }
 }
 
-@Preview(showBackground = true)
-@Composable
-fun AddScreenPreview() {
-    NewzarcAppTheme {
-        AddPostScreen(null, null)
-    }
-}
+//@Preview(showBackground = true)
+//@Composable
+//fun AddScreenPreview() {
+//    NewzarcAppTheme {
+//        AddPostScreen(null, null)
+//    }
+//}

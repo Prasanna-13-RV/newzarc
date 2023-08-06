@@ -47,74 +47,59 @@ import com.newzarc.newzarcapp.R
 import com.newzarc.newzarcapp.data.model.post.PostEntity
 import com.newzarc.newzarcapp.ui.theme.NewzarcAppTheme
 import com.newzarc.newzarcapp.viewmodel.NewsViewModel
+import com.newzarc.newzarcapp.views.screens.components.LoadingSpinner
 import com.newzarc.newzarcapp.views.screens.components.RoundedImage
 import com.newzarc.newzarcapp.views.screens.components.TopBar
 
 
 @Composable
 fun PostScreen(
-    navController: NavController?,
+    navController: NavController,
     postsViewModel: NewsViewModel?,
     openDrawer: (() -> Unit)?
 ) {
 
     val viewModel = postsViewModel?.getPosts()?.observeAsState()
 
-//    val viewModel = arrayOf(
-//        PostEntity(
-//            idPost = 7,
-//            namePost = "Mizoram awaits Centre's assistance for providing shelter to 12,600 people from Manipur",
-//            descriptionPost = "Mizoram officials say they haven't received any assistance from the Centre even after CM Zoramthanga had sought Rs 10 crore, in May, as an immediate relief package for displaced people. AIZWAL: The Mizoram government is still waiting for financial assistance from the Centre for providing shelter to over 12,600 people from ethnic strife-torn Manipur, a senior official said. Mizoram Home Commissioner and Secretary H Lalengmawia said that Chief Minister Zoramthanga had, in May, sought Rs 10 crore as an immediate relief package for those displaced people. \\\"We have not received any assistance from the Centre so far. The state government has raised funds on its own to provide relief to internally displaced people from Manipur,\\\" Lalengmawia told PTI on Sunday. He hoped that the Centre would soon sanction funds for these people, who have taken shelter in Mizoram after the ethnic violence broke out in the neighbouring state on May 3. Lalengmawia also said the Mizoram administration has solicited donations from legislators, government employees, bankers and others. \\\"We have completed the collection and I am yet to receive a report of the total collected amount,\\\" he said. According to the Mizoram home department, altogether 12,611 people from Manipur have taken shelter in the state till Friday. Of them, 4,440 took shelter in the Kolasib district, 4,265 in Aizawl and 2,951 in Saitual, it said. The remaining 955 are residing in Champhai, Mamit, Siaha, Lawngtlai, Lunglei, Serchhip, Khawzawl and Hnahthial districts. The government and village authorities have set up 38 relief camps in Aizawl, Kolasib and Saitual. The state government, NGOs, churches and villagers provided food and other basic items to the displaced people. Clashes first broke out in early May in Manipur after a 'Tribal Solidarity March' was organised in the hill districts to protest against the Meitei community's demand for Scheduled Tribe (ST) status. Meiteis account for about 53 per cent of Manipur's population and live mostly in the Imphal Valley. Tribals — Nagas and Kukis — constitute another 40 per cent of the population and reside in the hill districts.",
-//            imageUrlPost = "fghjk",
-//            likePost = 6,
-//            user_id = 1,
-//            name_user = "fghjk fghjk",
-//            image_user = "fghjk",
-//        )
-//    )
 
     Log.d("viewmodel", viewModel?.value.toString())
 
-    Column() {
-        TopBar(navController = navController, name = "Posts", openDrawer)
+    Box(modifier = Modifier.fillMaxSize()) {
 
-        if (viewModel?.value?.isNotEmpty() == true) {
-            Box(
-                modifier = Modifier
-                    .padding(horizontal = 15.dp)
-                    .fillMaxSize()
-            ) {
-                LazyColumn(modifier = Modifier.padding(bottom = 20.dp)) {
-                    if (viewModel.value?.isNotEmpty() == true) {
-                        items(viewModel.value!!) {
+        Column(modifier = Modifier.padding(bottom = 15.dp)) {
+            TopBar(navController = navController, name = "Posts", openDrawer, null)
 
-                            var likeButton by remember {
-                                mutableStateOf<Boolean>(false)
-                            }
-                            var popupButton by remember {
-                                mutableStateOf<Boolean>(false)
-                            }
-                            Card(modifier = Modifier.padding(vertical = 15.dp)) {
-                                Column(
-                                    modifier = Modifier.padding(10.dp),
-                                    horizontalAlignment = Alignment.CenterHorizontally
+            LazyColumn(modifier = Modifier.padding(bottom = 20.dp)) {
+                if (viewModel?.value?.isNotEmpty() == true) {
+                    items(viewModel.value!!) {
+
+                        var likeButton by remember {
+                            mutableStateOf<Boolean>(false)
+                        }
+                        var popupButton by remember {
+                            mutableStateOf<Boolean>(false)
+                        }
+                        Card(modifier = Modifier.padding(vertical = 15.dp)) {
+                            Column(
+                                modifier = Modifier.padding(10.dp),
+                                horizontalAlignment = Alignment.CenterHorizontally
+                            ) {
+                                Row(
+                                    modifier = Modifier.fillMaxWidth(),
+                                    Arrangement.SpaceBetween
                                 ) {
-                                    Row(
-                                        modifier = Modifier.fillMaxWidth(),
-                                        Arrangement.SpaceBetween
-                                    ) {
 
-                                        var imageUrl =
-                                            if (it.image_user != null) it.image_user else "https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80"
+                                    var imageUrl =
+                                        if (it.image_user != null) it.image_user else "https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80"
 
-                                        RoundedImage(imageUrl, 40)
-                                        Text(
-                                            modifier = Modifier,
-                                            text = it.name_user,
-                                            fontWeight = FontWeight.Bold,
-                                            fontSize = 24.sp,
-                                        )
-                                    }
+                                    RoundedImage(imageUrl, 40)
+                                    Text(
+                                        modifier = Modifier,
+                                        text = it.name_user,
+                                        fontWeight = FontWeight.Bold,
+                                        fontSize = 24.sp,
+                                    )
+                                }
 //                                Text(
 //                                    modifier = Modifier,
 //                                    text = it.namePost,
@@ -122,74 +107,76 @@ fun PostScreen(
 //                                    fontSize = 24.sp,
 //                                )
 //                                NewsImage("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg")
-                                    NewsImage(path = it.imageUrlPost)
+                                NewsImage(path = it.imageUrlPost)
 //                                Spacer(
 //                                    modifier = Modifier.padding(90.dp)
 //                                )
-                                    Row(
-                                        modifier = Modifier
-                                            .fillMaxWidth()
-                                            .height(40.dp),
-                                        Arrangement.SpaceBetween
-                                    ) {
+                                Row(
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .height(40.dp),
+                                    Arrangement.SpaceBetween
+                                ) {
 
-                                        if (likeButton) {
-                                            Image(
-                                                painterResource(R.drawable.red_ike_button),
-                                                contentDescription = "",
-                                                contentScale = ContentScale.FillHeight,
-                                                modifier = Modifier
-                                                    .height(30.dp)
-                                                    .clickable(onClick = {
-                                                        likeButton = !likeButton
-                                                    })
-                                            )
-                                        } else {
-                                            Image(
-                                                painterResource(R.drawable.like_button),
-                                                contentDescription = "",
-                                                contentScale = ContentScale.FillHeight,
-                                                modifier = Modifier
-                                                    .height(30.dp)
-                                                    .clickable(onClick = {
-                                                        likeButton = !likeButton
-                                                    })
-                                            )
-                                        }
+                                    if (likeButton) {
                                         Image(
-                                            painterResource(R.drawable.share_button),
+                                            painterResource(R.drawable.red_ike_button),
                                             contentDescription = "",
-                                            contentScale = ContentScale.Crop,
-                                            modifier = Modifier.height(30.dp)
+                                            contentScale = ContentScale.FillHeight,
+                                            modifier = Modifier
+                                                .height(30.dp)
+                                                .clickable(onClick = {
+                                                    likeButton = !likeButton
+                                                })
+                                        )
+                                    } else {
+                                        Image(
+                                            painterResource(R.drawable.like_button),
+                                            contentDescription = "",
+                                            contentScale = ContentScale.FillHeight,
+                                            modifier = Modifier
+                                                .height(30.dp)
+                                                .clickable(onClick = {
+                                                    likeButton = !likeButton
+                                                })
                                         )
                                     }
-                                    Text(
-                                        modifier = Modifier
-                                            .fillMaxWidth()
-                                            .clickable(onClick = {
-                                                popupButton = !popupButton
-                                            }),
-                                        text = it.namePost,
-                                        maxLines = 2,
-                                        overflow = TextOverflow.Ellipsis,
-                                        fontSize = 18.sp,
+                                    Image(
+                                        painterResource(R.drawable.share_button),
+                                        contentDescription = "",
+                                        contentScale = ContentScale.Crop,
+                                        modifier = Modifier.height(30.dp)
                                     )
-                                    if (popupButton) {
-                                        Dialog(
-                                            onDismissRequest = {
-                                                popupButton = !popupButton
-                                            },
-                                        ) {
-                                            PopUpPostContent(
-                                                it
-                                            ) { popupButton = !popupButton }
-                                        }
+                                }
+                                Text(
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .clickable(onClick = {
+                                            popupButton = !popupButton
+                                        }),
+                                    text = it.namePost,
+                                    maxLines = 2,
+                                    overflow = TextOverflow.Ellipsis,
+                                    fontSize = 18.sp,
+                                )
+                                if (popupButton) {
+                                    Dialog(
+                                        onDismissRequest = {
+                                            popupButton = !popupButton
+                                        },
+                                    ) {
+                                        PopUpPostContent(
+                                            it
+                                        ) { popupButton = !popupButton }
                                     }
                                 }
                             }
                         }
                     }
-
+                } else {
+                    item {
+                        LoadingSpinner()
+                    }
                 }
             }
         }

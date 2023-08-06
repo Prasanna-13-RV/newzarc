@@ -2,7 +2,6 @@ package com.newzarc.newzarcapp.app;
 
 import androidx.hilt.work.HiltWrapper_WorkerFactoryModule;
 import com.newzarc.newzarcapp.MainActivity_GeneratedInjector;
-import com.newzarc.newzarcapp.di.AppModule;
 import com.newzarc.newzarcapp.di.CacheDataModule;
 import com.newzarc.newzarcapp.di.DatabaseModule;
 import com.newzarc.newzarcapp.di.LocalDataModule;
@@ -125,7 +124,6 @@ public final class NewzarcApplication_HiltComponents {
 
   @Component(
       modules = {
-          AppModule.class,
           ApplicationContextModule.class,
           CacheDataModule.class,
           DatabaseModule.class,

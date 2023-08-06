@@ -2,7 +2,7 @@ package com.newzarc.newzarcapp.views.navigation.bottomnav;
 
 import java.lang.System;
 
-@kotlin.Metadata(mv = {1, 7, 1}, k = 1, d1 = {"\u00000\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u000b\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\b7\u0018\u00002\u00020\u0001:\u0005\r\u000e\u000f\u0010\u0011B\u001f\b\u0004\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u00a2\u0006\u0002\u0010\u0007R\u0011\u0010\u0005\u001a\u00020\u0006\u00a2\u0006\b\n\u0000\u001a\u0004\b\b\u0010\tR\u0011\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\b\n\u0000\u001a\u0004\b\n\u0010\u000bR\u0011\u0010\u0004\u001a\u00020\u0003\u00a2\u0006\b\n\u0000\u001a\u0004\b\f\u0010\u000b\u0082\u0001\u0005\u0012\u0013\u0014\u0015\u0016\u00a8\u0006\u0017"}, d2 = {"Lcom/newzarc/newzarcapp/views/navigation/bottomnav/BottomBarScreen;", "", "route", "", "title", "icon", "Landroidx/compose/ui/graphics/vector/ImageVector;", "(Ljava/lang/String;Ljava/lang/String;Landroidx/compose/ui/graphics/vector/ImageVector;)V", "getIcon", "()Landroidx/compose/ui/graphics/vector/ImageVector;", "getRoute", "()Ljava/lang/String;", "getTitle", "Account", "Add", "News", "Posts", "Show", "Lcom/newzarc/newzarcapp/views/navigation/bottomnav/BottomBarScreen$Account;", "Lcom/newzarc/newzarcapp/views/navigation/bottomnav/BottomBarScreen$Add;", "Lcom/newzarc/newzarcapp/views/navigation/bottomnav/BottomBarScreen$News;", "Lcom/newzarc/newzarcapp/views/navigation/bottomnav/BottomBarScreen$Posts;", "Lcom/newzarc/newzarcapp/views/navigation/bottomnav/BottomBarScreen$Show;", "app_debug"})
+@kotlin.Metadata(mv = {1, 7, 1}, k = 1, d1 = {"\u0000@\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u000f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\b7\u0018\u00002\u00020\u0001:\t\r\u000e\u000f\u0010\u0011\u0012\u0013\u0014\u0015B\u001f\b\u0004\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u00a2\u0006\u0002\u0010\u0007R\u0011\u0010\u0005\u001a\u00020\u0006\u00a2\u0006\b\n\u0000\u001a\u0004\b\b\u0010\tR\u0011\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\b\n\u0000\u001a\u0004\b\n\u0010\u000bR\u0011\u0010\u0004\u001a\u00020\u0003\u00a2\u0006\b\n\u0000\u001a\u0004\b\f\u0010\u000b\u0082\u0001\t\u0016\u0017\u0018\u0019\u001a\u001b\u001c\u001d\u001e\u00a8\u0006\u001f"}, d2 = {"Lcom/newzarc/newzarcapp/views/navigation/bottomnav/BottomBarScreen;", "", "route", "", "title", "icon", "Landroidx/compose/ui/graphics/vector/ImageVector;", "(Ljava/lang/String;Ljava/lang/String;Landroidx/compose/ui/graphics/vector/ImageVector;)V", "getIcon", "()Landroidx/compose/ui/graphics/vector/ImageVector;", "getRoute", "()Ljava/lang/String;", "getTitle", "AccountScreen", "AddPostScreen", "LoginScreen", "NewsScreen", "PostsScreen", "RegisterScreen", "ShowPostScreen", "SingleNewsScreen", "UpdateProfileAccount", "Lcom/newzarc/newzarcapp/views/navigation/bottomnav/BottomBarScreen$AccountScreen;", "Lcom/newzarc/newzarcapp/views/navigation/bottomnav/BottomBarScreen$AddPostScreen;", "Lcom/newzarc/newzarcapp/views/navigation/bottomnav/BottomBarScreen$LoginScreen;", "Lcom/newzarc/newzarcapp/views/navigation/bottomnav/BottomBarScreen$NewsScreen;", "Lcom/newzarc/newzarcapp/views/navigation/bottomnav/BottomBarScreen$PostsScreen;", "Lcom/newzarc/newzarcapp/views/navigation/bottomnav/BottomBarScreen$RegisterScreen;", "Lcom/newzarc/newzarcapp/views/navigation/bottomnav/BottomBarScreen$ShowPostScreen;", "Lcom/newzarc/newzarcapp/views/navigation/bottomnav/BottomBarScreen$SingleNewsScreen;", "Lcom/newzarc/newzarcapp/views/navigation/bottomnav/BottomBarScreen$UpdateProfileAccount;", "app_debug"})
 public abstract class BottomBarScreen {
     @org.jetbrains.annotations.NotNull
     private final java.lang.String route = null;
@@ -30,52 +30,92 @@ public abstract class BottomBarScreen {
         return null;
     }
     
-    @kotlin.Metadata(mv = {1, 7, 1}, k = 1, d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\b\u00c7\u0002\u0018\u00002\u00020\u0001B\u0007\b\u0002\u00a2\u0006\u0002\u0010\u0002\u00a8\u0006\u0003"}, d2 = {"Lcom/newzarc/newzarcapp/views/navigation/bottomnav/BottomBarScreen$News;", "Lcom/newzarc/newzarcapp/views/navigation/bottomnav/BottomBarScreen;", "()V", "app_debug"})
-    public static final class News extends com.newzarc.newzarcapp.views.navigation.bottomnav.BottomBarScreen {
+    @kotlin.Metadata(mv = {1, 7, 1}, k = 1, d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\b\u00c7\u0002\u0018\u00002\u00020\u0001B\u0007\b\u0002\u00a2\u0006\u0002\u0010\u0002\u00a8\u0006\u0003"}, d2 = {"Lcom/newzarc/newzarcapp/views/navigation/bottomnav/BottomBarScreen$NewsScreen;", "Lcom/newzarc/newzarcapp/views/navigation/bottomnav/BottomBarScreen;", "()V", "app_debug"})
+    public static final class NewsScreen extends com.newzarc.newzarcapp.views.navigation.bottomnav.BottomBarScreen {
         @org.jetbrains.annotations.NotNull
-        public static final com.newzarc.newzarcapp.views.navigation.bottomnav.BottomBarScreen.News INSTANCE = null;
+        public static final com.newzarc.newzarcapp.views.navigation.bottomnav.BottomBarScreen.NewsScreen INSTANCE = null;
         
-        private News() {
+        private NewsScreen() {
             super(null, null, null);
         }
     }
     
-    @kotlin.Metadata(mv = {1, 7, 1}, k = 1, d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\b\u00c7\u0002\u0018\u00002\u00020\u0001B\u0007\b\u0002\u00a2\u0006\u0002\u0010\u0002\u00a8\u0006\u0003"}, d2 = {"Lcom/newzarc/newzarcapp/views/navigation/bottomnav/BottomBarScreen$Posts;", "Lcom/newzarc/newzarcapp/views/navigation/bottomnav/BottomBarScreen;", "()V", "app_debug"})
-    public static final class Posts extends com.newzarc.newzarcapp.views.navigation.bottomnav.BottomBarScreen {
+    @kotlin.Metadata(mv = {1, 7, 1}, k = 1, d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\b\u00c7\u0002\u0018\u00002\u00020\u0001B\u0007\b\u0002\u00a2\u0006\u0002\u0010\u0002\u00a8\u0006\u0003"}, d2 = {"Lcom/newzarc/newzarcapp/views/navigation/bottomnav/BottomBarScreen$SingleNewsScreen;", "Lcom/newzarc/newzarcapp/views/navigation/bottomnav/BottomBarScreen;", "()V", "app_debug"})
+    public static final class SingleNewsScreen extends com.newzarc.newzarcapp.views.navigation.bottomnav.BottomBarScreen {
         @org.jetbrains.annotations.NotNull
-        public static final com.newzarc.newzarcapp.views.navigation.bottomnav.BottomBarScreen.Posts INSTANCE = null;
+        public static final com.newzarc.newzarcapp.views.navigation.bottomnav.BottomBarScreen.SingleNewsScreen INSTANCE = null;
         
-        private Posts() {
+        private SingleNewsScreen() {
             super(null, null, null);
         }
     }
     
-    @kotlin.Metadata(mv = {1, 7, 1}, k = 1, d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\b\u00c7\u0002\u0018\u00002\u00020\u0001B\u0007\b\u0002\u00a2\u0006\u0002\u0010\u0002\u00a8\u0006\u0003"}, d2 = {"Lcom/newzarc/newzarcapp/views/navigation/bottomnav/BottomBarScreen$Add;", "Lcom/newzarc/newzarcapp/views/navigation/bottomnav/BottomBarScreen;", "()V", "app_debug"})
-    public static final class Add extends com.newzarc.newzarcapp.views.navigation.bottomnav.BottomBarScreen {
+    @kotlin.Metadata(mv = {1, 7, 1}, k = 1, d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\b\u00c7\u0002\u0018\u00002\u00020\u0001B\u0007\b\u0002\u00a2\u0006\u0002\u0010\u0002\u00a8\u0006\u0003"}, d2 = {"Lcom/newzarc/newzarcapp/views/navigation/bottomnav/BottomBarScreen$PostsScreen;", "Lcom/newzarc/newzarcapp/views/navigation/bottomnav/BottomBarScreen;", "()V", "app_debug"})
+    public static final class PostsScreen extends com.newzarc.newzarcapp.views.navigation.bottomnav.BottomBarScreen {
         @org.jetbrains.annotations.NotNull
-        public static final com.newzarc.newzarcapp.views.navigation.bottomnav.BottomBarScreen.Add INSTANCE = null;
+        public static final com.newzarc.newzarcapp.views.navigation.bottomnav.BottomBarScreen.PostsScreen INSTANCE = null;
         
-        private Add() {
+        private PostsScreen() {
             super(null, null, null);
         }
     }
     
-    @kotlin.Metadata(mv = {1, 7, 1}, k = 1, d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\b\u00c7\u0002\u0018\u00002\u00020\u0001B\u0007\b\u0002\u00a2\u0006\u0002\u0010\u0002\u00a8\u0006\u0003"}, d2 = {"Lcom/newzarc/newzarcapp/views/navigation/bottomnav/BottomBarScreen$Show;", "Lcom/newzarc/newzarcapp/views/navigation/bottomnav/BottomBarScreen;", "()V", "app_debug"})
-    public static final class Show extends com.newzarc.newzarcapp.views.navigation.bottomnav.BottomBarScreen {
+    @kotlin.Metadata(mv = {1, 7, 1}, k = 1, d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\b\u00c7\u0002\u0018\u00002\u00020\u0001B\u0007\b\u0002\u00a2\u0006\u0002\u0010\u0002\u00a8\u0006\u0003"}, d2 = {"Lcom/newzarc/newzarcapp/views/navigation/bottomnav/BottomBarScreen$AddPostScreen;", "Lcom/newzarc/newzarcapp/views/navigation/bottomnav/BottomBarScreen;", "()V", "app_debug"})
+    public static final class AddPostScreen extends com.newzarc.newzarcapp.views.navigation.bottomnav.BottomBarScreen {
         @org.jetbrains.annotations.NotNull
-        public static final com.newzarc.newzarcapp.views.navigation.bottomnav.BottomBarScreen.Show INSTANCE = null;
+        public static final com.newzarc.newzarcapp.views.navigation.bottomnav.BottomBarScreen.AddPostScreen INSTANCE = null;
         
-        private Show() {
+        private AddPostScreen() {
             super(null, null, null);
         }
     }
     
-    @kotlin.Metadata(mv = {1, 7, 1}, k = 1, d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\b\u00c7\u0002\u0018\u00002\u00020\u0001B\u0007\b\u0002\u00a2\u0006\u0002\u0010\u0002\u00a8\u0006\u0003"}, d2 = {"Lcom/newzarc/newzarcapp/views/navigation/bottomnav/BottomBarScreen$Account;", "Lcom/newzarc/newzarcapp/views/navigation/bottomnav/BottomBarScreen;", "()V", "app_debug"})
-    public static final class Account extends com.newzarc.newzarcapp.views.navigation.bottomnav.BottomBarScreen {
+    @kotlin.Metadata(mv = {1, 7, 1}, k = 1, d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\b\u00c7\u0002\u0018\u00002\u00020\u0001B\u0007\b\u0002\u00a2\u0006\u0002\u0010\u0002\u00a8\u0006\u0003"}, d2 = {"Lcom/newzarc/newzarcapp/views/navigation/bottomnav/BottomBarScreen$ShowPostScreen;", "Lcom/newzarc/newzarcapp/views/navigation/bottomnav/BottomBarScreen;", "()V", "app_debug"})
+    public static final class ShowPostScreen extends com.newzarc.newzarcapp.views.navigation.bottomnav.BottomBarScreen {
         @org.jetbrains.annotations.NotNull
-        public static final com.newzarc.newzarcapp.views.navigation.bottomnav.BottomBarScreen.Account INSTANCE = null;
+        public static final com.newzarc.newzarcapp.views.navigation.bottomnav.BottomBarScreen.ShowPostScreen INSTANCE = null;
         
-        private Account() {
+        private ShowPostScreen() {
+            super(null, null, null);
+        }
+    }
+    
+    @kotlin.Metadata(mv = {1, 7, 1}, k = 1, d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\b\u00c7\u0002\u0018\u00002\u00020\u0001B\u0007\b\u0002\u00a2\u0006\u0002\u0010\u0002\u00a8\u0006\u0003"}, d2 = {"Lcom/newzarc/newzarcapp/views/navigation/bottomnav/BottomBarScreen$AccountScreen;", "Lcom/newzarc/newzarcapp/views/navigation/bottomnav/BottomBarScreen;", "()V", "app_debug"})
+    public static final class AccountScreen extends com.newzarc.newzarcapp.views.navigation.bottomnav.BottomBarScreen {
+        @org.jetbrains.annotations.NotNull
+        public static final com.newzarc.newzarcapp.views.navigation.bottomnav.BottomBarScreen.AccountScreen INSTANCE = null;
+        
+        private AccountScreen() {
+            super(null, null, null);
+        }
+    }
+    
+    @kotlin.Metadata(mv = {1, 7, 1}, k = 1, d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\b\u00c7\u0002\u0018\u00002\u00020\u0001B\u0007\b\u0002\u00a2\u0006\u0002\u0010\u0002\u00a8\u0006\u0003"}, d2 = {"Lcom/newzarc/newzarcapp/views/navigation/bottomnav/BottomBarScreen$LoginScreen;", "Lcom/newzarc/newzarcapp/views/navigation/bottomnav/BottomBarScreen;", "()V", "app_debug"})
+    public static final class LoginScreen extends com.newzarc.newzarcapp.views.navigation.bottomnav.BottomBarScreen {
+        @org.jetbrains.annotations.NotNull
+        public static final com.newzarc.newzarcapp.views.navigation.bottomnav.BottomBarScreen.LoginScreen INSTANCE = null;
+        
+        private LoginScreen() {
+            super(null, null, null);
+        }
+    }
+    
+    @kotlin.Metadata(mv = {1, 7, 1}, k = 1, d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\b\u00c7\u0002\u0018\u00002\u00020\u0001B\u0007\b\u0002\u00a2\u0006\u0002\u0010\u0002\u00a8\u0006\u0003"}, d2 = {"Lcom/newzarc/newzarcapp/views/navigation/bottomnav/BottomBarScreen$RegisterScreen;", "Lcom/newzarc/newzarcapp/views/navigation/bottomnav/BottomBarScreen;", "()V", "app_debug"})
+    public static final class RegisterScreen extends com.newzarc.newzarcapp.views.navigation.bottomnav.BottomBarScreen {
+        @org.jetbrains.annotations.NotNull
+        public static final com.newzarc.newzarcapp.views.navigation.bottomnav.BottomBarScreen.RegisterScreen INSTANCE = null;
+        
+        private RegisterScreen() {
+            super(null, null, null);
+        }
+    }
+    
+    @kotlin.Metadata(mv = {1, 7, 1}, k = 1, d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\b\u00c7\u0002\u0018\u00002\u00020\u0001B\u0007\b\u0002\u00a2\u0006\u0002\u0010\u0002\u00a8\u0006\u0003"}, d2 = {"Lcom/newzarc/newzarcapp/views/navigation/bottomnav/BottomBarScreen$UpdateProfileAccount;", "Lcom/newzarc/newzarcapp/views/navigation/bottomnav/BottomBarScreen;", "()V", "app_debug"})
+    public static final class UpdateProfileAccount extends com.newzarc.newzarcapp.views.navigation.bottomnav.BottomBarScreen {
+        @org.jetbrains.annotations.NotNull
+        public static final com.newzarc.newzarcapp.views.navigation.bottomnav.BottomBarScreen.UpdateProfileAccount INSTANCE = null;
+        
+        private UpdateProfileAccount() {
             super(null, null, null);
         }
     }

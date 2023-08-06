@@ -40,6 +40,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -47,13 +48,19 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import androidx.navigation.NavController
 import com.newzarc.newzarcapp.R
+import com.newzarc.newzarcapp.data.model.user.UserEntity
 import com.newzarc.newzarcapp.ui.theme.NewzarcAppTheme
+import com.newzarc.newzarcapp.viewmodel.NewsViewModel
 import com.newzarc.newzarcapp.views.screens.components.RoundedImage
 import com.newzarc.newzarcapp.views.screens.components.TopBar
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ProfileScreen(navController: NavController, openDrawer: (() -> Unit)?) {
+fun ProfileScreen(
+    navController: NavController,
+    myviewmodel: NewsViewModel,
+    openDrawer: (() -> Unit)?
+) {
     var isupdatePassword = remember {
         mutableStateOf<Boolean>(false)
     }
@@ -65,12 +72,22 @@ fun ProfileScreen(navController: NavController, openDrawer: (() -> Unit)?) {
     var oldPassword by remember {
         mutableStateOf("")
     }
+    val context = LocalContext.current
+    val myuser : UserEntity = myviewmodel.getSharedObject(
+        context,
+        UserEntity::class.java,
+        "userPref",
+        "loginUser"
+    ) as UserEntity
+
+    Log.d("myuser", myuser.toString())
+
 
     Column(
         modifier = Modifier.fillMaxSize()
     )
     {
-        TopBar(navController, "Profile", openDrawer)
+        TopBar(navController, "Profile", openDrawer, null)
         Card(
             modifier = Modifier
                 .padding(12.dp)
@@ -87,7 +104,7 @@ fun ProfileScreen(navController: NavController, openDrawer: (() -> Unit)?) {
             ) {
                 CreateImageProfile()
                 Divider()
-                CreateInfo()
+                CreateInfo(myuser)
                 Button(onClick = {
 //                    Log.d("onClick", "Hello eeveryone")
 //                    navController.navigate("updateProfileScreen")
@@ -195,7 +212,7 @@ fun CreateImageProfile(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun CreateInfo() {
+fun CreateInfo(myuser : UserEntity) {
     Column(
         modifier = Modifier
             .padding(5.dp),
@@ -206,17 +223,17 @@ fun CreateInfo() {
             color = Color.Blue,
             fontSize = 24.sp,
             style = MaterialTheme.typography.headlineSmall,
-            text = "User name"
+            text = myuser.name_user
         )
 
         Text(
-            text = "email",
+            text = myuser.email_user,
             modifier = Modifier.padding(3.dp),
             style = MaterialTheme.typography.bodyLarge
         )
 
         Text(
-            text = "9876543210",
+            text = myuser.phone_user,
             modifier = Modifier.padding(3.dp),
             style = MaterialTheme.typography.bodyLarge
         )

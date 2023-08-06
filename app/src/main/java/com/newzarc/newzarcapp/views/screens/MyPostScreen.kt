@@ -43,13 +43,14 @@ import com.newzarc.newzarcapp.data.model.mypost.MyPostEntity
 import com.newzarc.newzarcapp.data.model.post.PostEntity
 import com.newzarc.newzarcapp.ui.theme.NewzarcAppTheme
 import com.newzarc.newzarcapp.viewmodel.NewsViewModel
+import com.newzarc.newzarcapp.views.screens.components.LoadingSpinner
 import com.newzarc.newzarcapp.views.screens.components.TopBar
 
 
 @OptIn(ExperimentalComposeUiApi::class)
 @Composable
 fun MyPostScreen(
-    navController: NavController?,
+    navController: NavController,
     postsViewModel: NewsViewModel?,
     openDrawer: (() -> Unit)?
 ) {
@@ -64,18 +65,17 @@ fun MyPostScreen(
 
     Log.d("Myviewmypost", viewModel?.value.toString())
 
-    if (viewModel?.value?.isNotEmpty() == true) {
+    Column {
+        TopBar(navController, "My Posts", openDrawer, null)
+        LazyColumn(
+            modifier = Modifier
+                .padding(horizontal = 15.dp, vertical = 10.dp)
+                .fillMaxSize()
+        ) {
+            if (viewModel?.value?.isNotEmpty() == true) {
+                items(viewModel.value!!) {
 
-        Column {
-            TopBar(navController, "My Posts", openDrawer)
-            LazyColumn(
-                modifier = Modifier
-                    .padding(horizontal = 15.dp, vertical = 10.dp)
-                    .fillMaxSize()
-            ) {
-                items(viewModel?.value!!) {
-
-                    Card {
+                    Card(modifier = Modifier.padding(vertical = 10.dp)) {
                         Column(modifier = Modifier.padding(10.dp)) {
                             Text(
                                 modifier = Modifier,
@@ -151,9 +151,14 @@ fun MyPostScreen(
                         }
                     }
                 }
+            } else {
+                item {
+                    LoadingSpinner()
+                }
             }
         }
     }
+
 }
 
 @OptIn(ExperimentalGlideComposeApi::class)
@@ -228,10 +233,10 @@ fun PopUpContent(function: () -> Unit, post: MyPostEntity) {
 }
 
 
-@Preview(showBackground = true)
-@Composable
-fun MyPostScreenPreview() {
-    NewzarcAppTheme {
-        MyPostScreen(null, null, null)
-    }
-}
+//@Preview(showBackground = true)
+//@Composable
+//fun MyPostScreenPreview() {
+//    NewzarcAppTheme {
+//        MyPostScreen(null, null, null)
+//    }
+//}

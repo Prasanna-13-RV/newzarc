@@ -1,5 +1,6 @@
 package com.newzarc.newzarcapp.views.screens
 
+import android.util.Log
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -26,7 +27,7 @@ import com.newzarc.newzarcapp.ui.theme.NewzarcAppTheme
 import com.newzarc.newzarcapp.views.screens.components.TopBar
 
 @Composable
-fun SingleNewsScreen(navController: NavController?, news: NewsEntity?, openDrawer: (() -> Unit)?) {
+fun SingleNewsScreen(navController: NavController, news: NewsEntity?, openDrawer: (() -> Unit)?) {
 
     Column {
         TopBar(
@@ -34,7 +35,7 @@ fun SingleNewsScreen(navController: NavController?, news: NewsEntity?, openDrawe
             name = (if (news.toString()
                     .isNotEmpty()
             ) news?.title?.substring(0, 15) + "..." else "News").toString(),
-            openDrawer
+            openDrawer, null
         )
         Box(
             modifier = Modifier
@@ -46,7 +47,7 @@ fun SingleNewsScreen(navController: NavController?, news: NewsEntity?, openDrawe
                 modifier = Modifier
             ) {
 
-//        Log.d("myViewSingle", news.toString())
+                Log.d("myViewSingle", news.toString())
 
                 if (news != null) {
                     item {
@@ -99,10 +100,10 @@ fun SingleNewsImage(path: String) {
     }
 }
 
-@Preview(showBackground = true)
-@Composable
-fun SingleNewsPreview() {
-    NewzarcAppTheme {
-        SingleNewsScreen(null, null, null)
-    }
-}
+//@Preview(showBackground = true)
+//@Composable
+//fun SingleNewsPreview() {
+//    NewzarcAppTheme {
+//        SingleNewsScreen(null, null, null)
+//    }
+//}

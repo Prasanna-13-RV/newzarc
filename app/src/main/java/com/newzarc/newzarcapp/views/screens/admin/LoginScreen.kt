@@ -1,5 +1,7 @@
 package com.newzarc.newzarcapp.views.screens.admin
 
+import android.util.Log
+import android.widget.Toast
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -17,6 +19,7 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
@@ -24,6 +27,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.paint
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.TextStyle
@@ -38,12 +42,12 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.newzarc.newzarcapp.R
 import com.newzarc.newzarcapp.ui.theme.NewzarcAppTheme
+import com.newzarc.newzarcapp.viewmodel.NewsViewModel
 import com.newzarc.newzarcapp.views.screens.NewsScreen
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun LoginScreen(navController: NavController?) {
-
+fun LoginScreen(navController: NavController, viewModel: NewsViewModel) {
     Box(
         modifier = Modifier.paint(
             // Replace with your image id
@@ -59,29 +63,46 @@ fun LoginScreen(navController: NavController?) {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
 
-            val username = remember { mutableStateOf(TextFieldValue()) }
-            val password = remember { mutableStateOf(TextFieldValue()) }
+            val email_user = remember { mutableStateOf(TextFieldValue()) }
+            val password_user = remember { mutableStateOf(TextFieldValue()) }
 
             Text(text = "Login", style = TextStyle(fontSize = 40.sp))
 
             Spacer(modifier = Modifier.height(20.dp))
             OutlinedTextField(
                 label = { Text(text = "Username") },
-                value = username.value,
-                onValueChange = { username.value = it })
+                value = email_user.value,
+                onValueChange = { email_user.value = it })
 
             Spacer(modifier = Modifier.height(20.dp))
             OutlinedTextField(
                 label = { Text(text = "Password") },
-                value = password.value,
+                value = password_user.value,
                 visualTransformation = PasswordVisualTransformation(),
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
-                onValueChange = { password.value = it })
+                onValueChange = { password_user.value = it })
 
+            val context = LocalContext.current
             Spacer(modifier = Modifier.height(20.dp))
             Box(modifier = Modifier.padding(40.dp, 0.dp, 40.dp, 0.dp)) {
                 Button(
-                    onClick = { },
+                    onClick = {
+                        viewModel.getUserByEmail(
+                            email_user.value.text,
+                            password_user.value.text,
+                            context, navController
+                        )
+                            .also {
+//                                Log.d("myuserlogin", it.toString())
+//                                if (it?.isNotEmpty() == true) {
+                                Toast.makeText(context, "Success in app", Toast.LENGTH_SHORT).show()
+//                                navController.navigate("news")
+//                                }
+//                                else {
+//                                    Toast.makeText(context, "Failed in app", Toast.LENGTH_SHORT).show()
+//                                }
+                            }
+                    },
                     shape = RoundedCornerShape(50.dp),
                     modifier = Modifier
                         .fillMaxWidth()
@@ -105,7 +126,9 @@ fun LoginScreen(navController: NavController?) {
                 modifier = Modifier
 //                .align(Alignment.BottomCenter)
                     .padding(20.dp),
-                onClick = { },
+                onClick = {
+                    navController.navigate("registerScreen")
+                },
                 style = TextStyle(
                     fontSize = 14.sp,
                     fontFamily = FontFamily.Default,
@@ -117,10 +140,10 @@ fun LoginScreen(navController: NavController?) {
     }
 }
 
-@Preview(showBackground = true)
-@Composable
-fun NewsLoginPreview() {
-    NewzarcAppTheme {
-        LoginScreen(null)
-    }
-}
+//@Preview(showBackground = true)
+//@Composable
+//fun NewsLoginPreview() {
+//    NewzarcAppTheme {
+//        LoginScreen(null)
+//    }
+//}

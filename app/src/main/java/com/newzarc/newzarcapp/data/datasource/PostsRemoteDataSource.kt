@@ -8,7 +8,6 @@ import retrofit2.Response
 interface PostsRemoteDataSource {
     suspend fun getAllPosts() : Response<PostList>
     suspend fun getMyPosts(user_id : String) : Response<MyPostList>
-
     suspend fun createPosts(post : MyPostEntity) : Response<MyPostEntity>
 
 }

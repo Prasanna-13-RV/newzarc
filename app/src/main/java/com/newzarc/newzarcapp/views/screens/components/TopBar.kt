@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.filled.Home
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -19,7 +20,12 @@ import com.newzarc.newzarcapp.views.navigation.drawernav.DrawerNavBar
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun TopBar(navController: NavController?, name: String, openDrawer: (() -> Unit)?) {
+fun TopBar(
+    navController: NavController,
+    name: String,
+    openDrawer: (() -> Unit)?,
+    screenName: String?
+) {
 
 //    DrawerNavBar(navController = navController!!)
     Box(
@@ -31,14 +37,23 @@ fun TopBar(navController: NavController?, name: String, openDrawer: (() -> Unit)
             modifier = Modifier.shadow(elevation = 8.dp),
             title = { Text(text = name) },
             navigationIcon = {
-                IconButton(onClick = openDrawer!!
+                IconButton(
+                    onClick = openDrawer!!
 //                {
-
 //                    navController.popBackStack("addtodo", inclusive = true)
 //                }
-        ) {
+//                    onClick = {
+//                        when (screenName) {
+//                            "singleNewsScreen" -> navController.popBackStack(
+//                                screenName,
+//                                inclusive = true
+//                            )
+//                            else -> openDrawer!!
+//                        }
+//                    }
+                ) {
                     Icon(
-                        imageVector = Icons.Filled.ArrowBack,
+                        imageVector = Icons.Filled.Home,
                         contentDescription = "Go back"
                     )
                 }

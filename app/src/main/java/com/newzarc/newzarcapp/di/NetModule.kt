@@ -2,13 +2,16 @@ package com.newzarc.newzarcapp.di
 
 import com.newzarc.newzarcapp.data.api.NewsService
 import com.newzarc.newzarcapp.data.api.PostService
+import com.newzarc.newzarcapp.data.api.UserService
 import com.newzarc.newzarcapp.utils.Contants.Companion.BASE_URL
+import com.newzarc.newzarcapp.utils.Contants.Companion.MY_BASE_URL
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import javax.inject.Named
 import javax.inject.Singleton
 
 
@@ -18,7 +21,8 @@ class NetModule() {
 
     @Singleton
     @Provides
-    fun providesRetrofit() : Retrofit {
+    @Named("newsapi")
+    fun providesRetrofit(): Retrofit {
         return Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
             .baseUrl(BASE_URL)
@@ -28,14 +32,30 @@ class NetModule() {
 
     @Singleton
     @Provides
-    fun providesNewsService(retrofit: Retrofit) : NewsService {
+    @Named("myapi")
+    fun providesMyRetrofit(): Retrofit {
+        return Retrofit.Builder()
+            .addConverterFactory(GsonConverterFactory.create())
+            .baseUrl(MY_BASE_URL)
+            .build()
+    }
+
+    @Singleton
+    @Provides
+    fun providesNewsService(@Named("newsapi") retrofit: Retrofit): NewsService {
         return retrofit.create(NewsService::class.java)
     }
 
     @Singleton
     @Provides
-    fun providesPostsService(retrofit: Retrofit) : PostService {
+    fun providesPostsService(@Named("myapi") retrofit: Retrofit): PostService {
         return retrofit.create(PostService::class.java)
+    }
+
+    @Singleton
+    @Provides
+    fun providesUserService(@Named("myapi") retrofit: Retrofit): UserService {
+        return retrofit.create(UserService::class.java)
     }
 
 

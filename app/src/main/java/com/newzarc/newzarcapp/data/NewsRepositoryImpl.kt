@@ -15,6 +15,7 @@ class NewsRepositoryImpl(
     override suspend fun getAllNews(): List<NewsEntity>? {
 //        return getNewsFromCache()
         return getNewsFromApi()
+//        return getNewsFromRoom()
     }
 
     override suspend fun updateNews(): List<NewsEntity>? {
@@ -81,5 +82,4 @@ class NewsRepositoryImpl(
         }
         return newsList!!
     }
-
 }
