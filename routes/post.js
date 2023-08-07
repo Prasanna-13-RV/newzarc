@@ -10,10 +10,13 @@ const {
     getSinglePost,
     deleteSinglePost,
     deleteAllPost,
-    getPostOfUser
+    getPostOfUser,
+    getPostAllDetails
 } = require("../controller/postsController");
 
 router.get("/posts", getPosts);
+
+router.get("/allposts", getPostAllDetails);
 
 router.get("/post/:idPost", getSinglePost);
 

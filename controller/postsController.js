@@ -10,27 +10,48 @@ const getPosts = (req, res) => {
     });
 };
 
+const getPostAllDetails = (req, res) => {
+    db.query(
+        "SELECT * FROM postNews, user WHERE postNews.user_id = user.user_id",
+        (err, result) => {
+            if (err) {
+                console.log(err);
+            } else {
+                res.json(result);
+            }
+        }
+    );
+};
+
 const getSinglePost = (req, res) => {
     const { idPost } = req.params;
-    db.query("SELECT * FROM postNews WHERE idPost = ?", parseInt(idPost), (err, result) => {
-        if (err) {
-            console.log(err);
-        } else {
-            res.json(result[0]);
+    db.query(
+        "SELECT * FROM postNews WHERE idPost = ?",
+        parseInt(idPost),
+        (err, result) => {
+            if (err) {
+                console.log(err);
+            } else {
+                res.json(result[0]);
+            }
         }
-    });
-}
+    );
+};
 
 const getPostOfUser = (req, res) => {
     const { user_id } = req.params;
-    db.query("SELECT * FROM postNews WHERE user_id = ?", (user_id), (err, result) => {
-        if (err) {
-            console.log(err);
-        } else {
-            res.json(result[0]);
+    db.query(
+        "SELECT * FROM postNews WHERE user_id = ?",
+        user_id,
+        (err, result) => {
+            if (err) {
+                console.log(err);
+            } else {
+                res.json(result);
+            }
         }
-    });
-}
+    );
+};
 
 const createPost = (req, res) => {
     const { namePost, descriptionPost, imageUrlPost, user_id } = req.body;
@@ -91,5 +112,6 @@ module.exports = {
     updatePost,
     deleteAllPost,
     deleteSinglePost,
-    getPostOfUser
+    getPostOfUser,
+    getPostAllDetails
 };
